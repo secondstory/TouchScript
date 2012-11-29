@@ -121,7 +121,7 @@ ol.linenums li {
 
 
 .header {
-	padding: 35px 0 10px;
+	padding: 25px 0 0px;
 	font-size: 12pt;
 }
 
@@ -164,6 +164,11 @@ div.footer {
   margin: 0 auto;
   padding: 50px 0 25px 0;
   text-align: center;
+}
+
+a.carousel-control {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-decoration: none;
 }
 
 /* Sidenav for Docs
