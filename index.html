@@ -71,8 +71,8 @@
                 <div class="span3 bs-docs-sidebar">
                     <ul class="nav nav-list bs-docs-sidenav">
                         <li><a href="#touchscript"><i class="icon-chevron-right"></i> TouchScript</a></li>
-                        <li><a href="#docs"><i class="icon-chevron-right"></i> Documentation</a></li>
                         <li><a href="#features"><i class="icon-chevron-right"></i> Features</a></li>
+                        <li><a href="#docs"><i class="icon-chevron-right"></i> Documentation</a></li>
                         <li><a href="#description"><i class="icon-chevron-right"></i> Description</a></li>
                         <li><a href="#tutorial"><i class="icon-chevron-right"></i> Tutorial</a></li>
                         <li><a href="#examples"><i class="icon-chevron-right"></i> Examples</a></li>
@@ -88,23 +88,26 @@
                         version: 1.0.1</p>
                         <p><code>TouchScript</code> is a multi-touch framework originally created by <code>Interactive Lab</code> to develop interactive installations.</p>
                     </section>
-                    <section id="docs">
-                        <h2>Documentation</h2>
-                        <p>Up to date documentation is available at <a href="docs/Index.html">our web site</a>. If you have any questions feel free to ask.</p>
-                    </section>
                     <section id="features">
                         <h2>Features</h2>
                         <p><ul>
-                        <li>Supports <code>TUIO</code>, mouse and <code>Windows 7</code> touch input;</li>
-                        <li>Manages gestures hierarchy and rules distribution of touch points to gestures;</li>
-                        <li>Can group touch points to clusters on big touch surfaces;</li>
-                        <li>Easy to write custom gesture recognizers;</li>
+                        <li>Can be used with Unity3d 3.5 and 4.x.</li>
+                        <li>Supported input sources: TUIO, mouse and native Windows 7 touch.</li>
+                        <li>Comes with many commonly used gestures. It's easy to write custom ones using C#.</li>
+                        <li>Manages simultaneous gesture recognition within scene hierarchy.</li>
+                        <li>Groups touch points into clusters on big touch surfaces.</li>
+                        <li>It's free and open-source.</li>
                         </ul></p>
+                    </section>
+                    <section id="docs">
+                        <h2>Help and Documentation</h2>
+                        <p>Up-to-date documentation is available <a href="docs/Index.html">here</a>.</p>
+                        <p>If you have any questions feel free to ask by email: <code>valentin.simonov [at] interactivelab.ru</code>, <br/>on skype: <code>simonov.valentin</code> or add an <a hreg="https://github.com/InteractiveLab/TouchScript/issues">issue</a> on GitHub.</p>
                     </section>
                     <section id="description">
                         <h2>Description</h2>
                         <p><code>TouchScript</code> consists of a number of components to configure touch and gesture recognition, implementations of common gestures and other tools. Gesture recognition works very similar to <code>iOS</code> implementation: a number of gesture recognizers attached to GameObjects receive touch point events and signal to central manager if they recognize a sequence of touch events as a gesture.</p>
-                        <p><span class="label label-important">NOTE:</span> GameObjects must have colliders to be touchable.</p>
+                        <p><span class="label label-important">NOTE:</span> <em>GameObjects must have colliders attached to be touchable.</em></p>
                         <h4>Adding touch support to your application</h4>
                         <ol>
                         <li>Import <code>TouchScript</code> unity package or copy <code>Plugins</code> folder to your Assets folder.</li>
