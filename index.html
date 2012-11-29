@@ -1,1 +1,169 @@
-My Page
+
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="TouchScript">
+        <meta name="author" content="Interactive Lab">
+        <title>TouchScript</title>
+        
+
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold|PT+Sans:400,700">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script type="text/javascript">
+          // google analytics
+        </script>
+    </head>
+
+    <body data-spy="scroll" data-target=".bs-docs-sidebar">
+        <div class="container header">
+            <ul>
+                <li class="logo"><h2>TouchScript</h2></li>
+                <li><a href="https://github.com/InteractiveLab/TouchScript">GitHub</a></li>
+                <li>|</li>
+                <li><a href="https://github.com/downloads/InteractiveLab/TouchScript/TouchScript.unitypackage">Download Unity Package</a></li>
+                <li>|</li>
+                <li><a href="https://github.com/InteractiveLab/TouchScript/issues">Issues</a></li>
+            </ul>
+        </div>
+        <div class="container page">
+            <div class="row">
+                <div class="span3 bs-docs-sidebar">
+                    <ul class="nav nav-list bs-docs-sidenav">
+                        <li><a href="#touchscript"><i class="icon-chevron-right"></i> TouchScript</a></li>
+                        <li><a href="#docs"><i class="icon-chevron-right"></i> Documentation</a></li>
+                        <li><a href="#features"><i class="icon-chevron-right"></i> Features</a></li>
+                        <li><a href="#description"><i class="icon-chevron-right"></i> Description</a></li>
+                        <li><a href="#tutorial"><i class="icon-chevron-right"></i> Tutorial</a></li>
+                        <li><a href="#examples"><i class="icon-chevron-right"></i> Examples</a></li>
+                        <li><a href="#versions"><i class="icon-chevron-right"></i> Versions history</a></li>
+                    </ul>
+                </div>
+                <div class="span9">
+                    <section id="touchscript">
+                        <h2>TouchScript</h2>
+                        <h4>Multi-touch framework for Unity3d</h4>
+                        <p>(c) <a href="http://www.interactivelab.ru/">Interactive Lab</a>.<br/>
+                        Licensed under MIT license.<br/>
+                        version: 1.0.1</p>
+                        <p><code>TouchScript</code> is a multi-touch framework originally created by <code>Interactive Lab</code> to develop interactive installations.</p>
+                    </section>
+                    <section id="docs">
+                        <h2>Documentation</h2>
+                        <p>Up to date documentation is available at <a href="http://touchscript.interactivelab.ru/">our web site</a>. If you have any questions feel free to ask.</p>
+                    </section>
+                    <section id="features">
+                        <h2>Features</h2>
+                        <p><ul>
+                        <li>Supports <code>TUIO</code>, mouse and <code>Windows 7</code> touch input;</li>
+                        <li>Manages gestures hierarchy and rules distribution of touch points to gestures;</li>
+                        <li>Can group touch points to clusters on big touch surfaces;</li>
+                        <li>Easy to write custom gesture recognizers;</li>
+                        </ul></p>
+                    </section>
+                    <section id="description">
+                        <h2>Description</h2>
+                        <p><code>TouchScript</code> consists of a number of components to configure touch and gesture recognition, implementations of common gestures and other tools. Gesture recognition works very similar to <code>iOS</code> implementation: a number of gesture recognizers attached to GameObjects receive touch point events and signal to central manager if they recognize a sequence of touch events as a gesture.</p>
+                        <p><span class="label label-important">NOTE:</span> GameObjects must have colliders to be touchable.</p>
+                        <h4>Adding touch support to your application</h4>
+                        <ol>
+                        <li>Import <code>TouchScript</code> unity package or copy <code>Plugins</code> folder to your Assets folder.</li>
+                        <li><em>[Optional]</em> Configure scripts execution order in the IDE so that you had all touch inputs executed before <code>TouchManager</code> and before default scripts execution time. For example, set <code>MouseInput</code> to -1003, <code>TuioInput</code> to -1002 and <code>TouchManager</code> to -1001. This step will increase interface responsiveness.</li>
+                        <li>Add <code>TouchOptions</code> component to a <code>GameObject</code> in your scene.</li>
+                        <li>Add needed input sources: <code>MouseInput</code>, <code>TuioInput</code> or <code>WMTouchInput</code>.</li>
+                        <li>Add <code>Debug Camera</code> prefab to your scene to see 2d touches on the screen.</li>
+                        </ol>
+                        <h4>Known limitations</h4>
+                        <ul>
+                        <li><code>Windows 7</code> touch recognition doesn't work in Unity IDE.</li>
+                        <li>The library relies on <code>C#</code> events so it doesn't work with <code>JavaScript</code>.</li>
+                        </ul>
+                        <h4>Before building</h4>
+                        <p>Copy <code>UnityEngine.dll</code> to <code>Lib</code> folder since the framework links to it. If anyone knows a better way of doing this without hardcoding paths or setting system variables, please let us know.</p>
+                    </section>
+                    <section id="tutorial">
+                        <h2>Tutorial</h2>
+                        <p>In <code>Gesture and Event Propagation</code> scene we have a hierarchy of objects which got different gestures attached.</p>
+                        <p>Check out <code>Main Camera</code> for inputs configuration and touch options.</p>
+                        <p>Let's take a look at <code>Plane</code> GameObject. It has the following gestures attached: <code>Pan</code>, <code>Scale</code>, <code>Rotate</code> and <code>Flick</code>. Also two behaviors which depend on these gestures: <code>Transformer2D</code> and <code>TSFLickDetector</code>. They all work together because they reference each other in <code>Will Recognize With</code> array. Otherwise only the first gesture to recognize in transforms hierarchy will be able to access these touch points.</p>
+                        <p>Check out the documentation to see what gestures' parameters mean.</p>
+                        <p><code>Transformer2D</code> applies transforms from attached gestures to the GameObject. Open <code>TSFlickDetector</code> to see how it works. It has only one line of code which uses <code>FlickGesture</code>'s <code>StateChanged</code> event to get notified when it is recognized.</p>
+<pre class="prettyprint linenums lang-csh">
+GetComponent<FlickGesture>().StateChanged += delegate(object sender, GestureStateChangeEventArgs args) { 
+    if (args.State == Gesture.GestureState.Recognized) print("FLICK"); 
+};
+</pre>                      
+                        <p>Other objects in the scene also have <code>Press</code>, <code>Release</code> and <code>Tap</code> gestures attached which are self explanatory. Bump and Colored behaviors show how to handle events when these gestures are recognized.</p>
+<pre class="prettyprint linenums lang-csh">
+if (GetComponent<PressGesture>() != null) GetComponent<PressGesture>().StateChanged += onPress;
+if (GetComponent<ReleaseGesture>() != null) GetComponent<ReleaseGesture>().StateChanged += onRelease;
+
+private void onRelease(object sender, GestureStateChangeEventArgs gestureStateChangeEventArgs) {
+    transform.localScale = startScale;
+}
+
+private void onPress(object sender, GestureStateChangeEventArgs gestureStateChangeEventArgs) {
+    transform.localScale = startScale * .7f;
+}
+</pre>
+                    <p>Notice that cubes in the example can be tapped and dragged separately or with the parent cube.</p>
+<pre class="prettyprint linenums lang-csh">
+tap.StateChanged += (sender, args) => { 
+    if (args.State == Gesture.GestureState.Recognized) 
+        renderer.material.color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f)); 
+};
+</pre> 
+                    </section>
+                    <section id="examples">
+                        <h2>Examples</h2>
+                        <p>See sample scenes in <code>Scenes</code> folder.</p>
+                    </section> 
+                    <section id="versions">
+                        <h2>Versions history</h2>
+                        <h4>1.0.1</h4>
+                        <p><ul>
+                        <li>Fixed: bugs with disabled gestures.</li>
+                        <li>Fixed: MouseInput bug with frozen touch points.</li>
+                        <li>Fixed: simultaneous gesture recognition.</li>
+                        <li>Added: Cluster.Camera.</li>
+                        <li>Added: DLLs to the sample project.</li>
+                        <li>Changed: camera settings for debug camera.</li>
+                        </ul></p>
+                        <h4>1.0</h4>
+                        <p><ul>
+                        <li>First release.</li>
+                        </ul></p>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/prettify.js"></script>
+        <script type="text/javascript">
+            !function ($) {
+
+              $(function(){
+
+                var $window = $(window)
+
+                // make code pretty
+                window.prettyPrint && prettyPrint()
+
+                // side bar
+                $('.bs-docs-sidenav').affix({
+                  offset: {
+                    top: function () { return $window.width() <= 980 ? 290 : 210 }
+                  , bottom: 270
+                  }
+                })
+
+              })
+            }(window.jQuery)
+        </script>
+    </body>
+</html>
