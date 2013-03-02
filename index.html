@@ -32,11 +32,11 @@
         <div class="container header">
             <ul>
                 <li class="logo"><h2>TouchScript</h2></li>
-                <li><a href="https://github.com/InteractiveLab/TouchScript">GitHub</a></li>
+                <li>GitHub (<a href="https://github.com/InteractiveLab/TouchScript">Unity</a>, <a href="https://github.com/InteractiveLab/TouchScript.as3">Flash</a>)</li>
                 <li>|</li>
                 <li><a href="https://github.com/downloads/InteractiveLab/TouchScript/TouchScript.unitypackage">Download Unity Package</a></li>
                 <li>|</li>
-                <li><a href="https://github.com/InteractiveLab/TouchScript/issues">Issues</a></li>
+                <li>Issues (<a href="https://github.com/InteractiveLab/TouchScript/issues">Unity</a>, <a href="https://github.com/InteractiveLab/TouchScript.as3/issues">Flash</a>)</li>
             </ul>
         </div>
         <div class="container page">
@@ -80,38 +80,58 @@
                 <div class="span3 bs-docs-sidebar">
                     <ul class="nav nav-list bs-docs-sidenav">
                         <li><a href="#touchscript"><i class="icon-chevron-right"></i> TouchScript</a></li>
-                        <li><a href="#features"><i class="icon-chevron-right"></i> Features</a></li>
+                        <li><a href="#versions"><i class="icon-chevron-right"></i> Versions</a></li>
                         <li><a href="#docs"><i class="icon-chevron-right"></i> Documentation</a></li>
                         <li><a href="#description"><i class="icon-chevron-right"></i> Description</a></li>
                         <li><a href="#tutorial"><i class="icon-chevron-right"></i> Tutorial</a></li>
                         <li><a href="#examples"><i class="icon-chevron-right"></i> Examples</a></li>
-                        <li><a href="#versions"><i class="icon-chevron-right"></i> Versions history</a></li>
+                        <li><a href="#history   "><i class="icon-chevron-right"></i> Versions history</a></li>
                     </ul>
                 </div>
                 <div class="span9">
                     <section id="touchscript">
                         <h2>TouchScript</h2>
-                        <h4>Multi-touch framework for Unity3d</h4>
-                        <p>© 2012 <a href="http://www.interactivelab.ru/">Interactive Lab</a>.<br/>
-                        Licensed under MIT license.<br/>
-                        version: 1.0.1</p>
-                        <p><code>TouchScript</code> is a multi-touch framework originally created by <code>Interactive Lab</code> to develop interactive installations.</p>
-                    </section>
-                    <section id="features">
-                        <h2>Features</h2>
+                        <h4>Multi-touch framework for Unity3d and Flash</h4>
+                        <p>Licensed under MIT license.<br/></p>
+                        <p><code>TouchScript</code> is a family of multi-touch frameworks for Unity3d and Flash. Inspired by iOS, it makes handling complex gesture interactions on large touch surfaces much easier. Unity3d and Flash implementations are developed to work together in Scaleform environment.<br/></p>
+
+                        <h4>Features</h4>
                         <p><ul>
-                        <li>Can be used with Unity3d 3.5 and 4.x.</li>
+                        <li>Works on PC, Mac, iOS and Android.</li>
+                        <li>Manages simultaneous gesture recognition within scene hierarchy (inspired by iOS).</li>
+                        <li>Comes with many commonly used gestures. Easy to write custom ones.</li>
                         <li>Supported input sources: TUIO, mouse and native Windows 7 touch.</li>
-                        <li>Comes with many commonly used gestures. It's easy to write custom ones using C#.</li>
-                        <li>Manages simultaneous gesture recognition within scene hierarchy.</li>
                         <li>Groups touch points into clusters on big touch surfaces.</li>
                         <li>It's free and open-source.</li>
+                        </p>
+                    </section>
+                    <section id="versions">    
+                        <h2>Versions</h2>
+                        <p>TouchScript was originally developed in ActionScript 3 for Flash, rewritten from scratch in C# for Unity3d and at the moment Unity3d branch is where most of the development takes place. AS3 version as a little brother gets all the new features with a slight delay.<br/></p>
+
+                        <h4>Unity3d</h4>
+                        <p><ul>
+                        <li>Written in C#, uses standard C# event system.</li>
+                        <li>Tested with Unity 3.5.x and 4.x.</li>
+                        <li>Handles touch points mapping from screen space to 3d space.</li>
+                        <li>Supports native touch events on iOS and Android.</li>
+                        </ul></p>
+
+                        <h4>Flash</h4>
+                        <p><ul>
+                        <li>Written in AS3, API is mostly the same as in Unity3d version.</li>
+                        <li>Tested with recent Flash Player versions and SDKs.</li>
+                        <li>Can receive touch events from Unity3d if running in Scaleform for Unity3d integration layer.</li>
+                        <li>Works standalone, in Scaleform and in iOS/Android apps.</li>
                         </ul></p>
                     </section>
                     <section id="docs">
                         <h2>Help and Documentation</h2>
-                        <p>Up-to-date documentation is available <a href="docs/Index.html">here</a>.</p>
-                        <p>If you have any questions feel free to ask by email: <code>valentin.simonov [at] interactivelab.ru</code>, <br/>on skype: <code>simonov.valentin</code> or add an <a hreg="https://github.com/InteractiveLab/TouchScript/issues">issue</a> on GitHub.</p>
+                        <p><ul>
+                            <li><a href="docs/Index.html">Up-to-date Unity3d documentation</a>.</li>
+                            <li>Flash documentation is not yet available.</li>
+                        </ul></p>
+                        <p>If you have any questions feel free to ask them at <a href="https://github.com/InteractiveLab/TouchScript/issues">the issues section</a> on GitHub.</p>
                     </section>
                     <section id="description">
                         <h2>Description</h2>
@@ -170,7 +190,7 @@ tap.StateChanged += (sender, args) => {
                         <h2>Examples</h2>
                         <p>See sample scenes in <code>Scenes</code> folder.</p>
                     </section> 
-                    <section id="versions">
+                    <section id="history">
                         <h2>Versions history</h2>
                         <h4>1.0.1</h4>
                         <p><ul>
