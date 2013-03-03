@@ -92,7 +92,6 @@
                     <section id="touchscript">
                         <h2>TouchScript</h2>
                         <h4>Multi-touch framework for Unity3d and Flash</h4>
-                        <p>Licensed under MIT license.<br/></p>
                         <p><code>TouchScript</code> is a family of multi-touch frameworks for Unity3d and Flash. It is much more than a handful of routines to receive touch events from different sources. Inspired by iOS, TouchScript makes handling complex gesture interactions on large touch surfaces much easier. Unity3d and Flash implementations are developed to work together in Scaleform environment.<br/></p>
 
                         <h4>Features</h4>
@@ -100,10 +99,10 @@
                         <li>Works on PC, Mac, iOS and Android.</li>
                         <li>Manages simultaneous gesture recognition within scene hierarchy (inspired by iOS).</li>
                         <li>Comes with many commonly used gestures. Easy to write custom ones.</li>
-                        <li>Supported input sources: TUIO, mouse and native Windows 7 touch.</li>
+                        <li>Supported input sources: TUIO, mouse, iOS and native Windows 7 touch.</li>
                         <li>Groups touch points into clusters on big touch surfaces.</li>
                         <li>Easy to test multi-touch gestures without actual multi-touch device using <a href="https://itunes.apple.com/us/app/tuiopad/id412446962">TUIOPad on iOs</a> or <a href="https://play.google.com/store/apps/details?id=tuioDroid.impl&hl=en">TUIODroid on Android</a>.</li>
-                        <li>It's free and open-source.</li>
+                        <li>It's free and open-source. Licensed under MIT license.</li>
                         </p>
                     </section>
                     <section id="versions">    
@@ -174,12 +173,21 @@
                     <section id="tutorials">
                         <h2>Tutorials</h2>
                         <h4>Unity3d — Basic</h4>
-                        <p>Create a new project and either import <code>TouchScript.unitypackage</code> or copy <code>TouchScript</code> folder from examples in the repository to <em>Assets</em> folder. Drag and drop <code>Debug Camera</code> from <em>TouchScript/Prefabs</em> folder to see where your touch points lend.</p>
-                        <p>Now if you press Play you can click anywhere in Game view and a nice cian touch cursor with id will appear. The library automatically created <code>TouchScript</code> GameObject in Scene Hierarchy with <code>Touch Manager</code> and <code>Mouse Input</code> Behaviors attached. They are created automatically if no <em>Touch Manager</em> and <em>Input Source</em> instance exhist. If run on a tablet <code>iOS Input</code> is created instead.</p>
-                        <p>A good practice is to create them manually because this way you can set their parameters and add more input sources. Go out of Play mode and create a new GameObject named <em>TouchScript</em> (actually, it doesn't matter how you call it). Add <code>Touch Manager</code> and <code>Mouse Input</code> behaviors to this GameObject. If you press Play you'll see the same behavior as before. But now you can add <code>TUIO Input</code> which will be listening for touch data at port <em>3333</em> and you can use <a href="https://itunes.apple.com/us/app/tuiopad/id412446962">TUIOPad on iOs</a> or <a href="https://play.google.com/store/apps/details?id=tuioDroid.impl&hl=en">TUIODroid on Android</a> to test multi-touch interaction.</p>
-                        <p>Now add a plane, some lights and a simple Cube with <code>Rigid Body</code> component attached. Make a prefab from it. You'll end up with something like this:</p>
+                        <p><code>1.</code> <b>Create a new project.</b></p>
+                        <p><code>2.</code> <b>Either import <code>TouchScript.unitypackage</code> or copy <code>TouchScript</code> folder from examples to <em>Assets</em> folder.</b></p>
+                        <p>Drag and drop <code>Debug Camera</code> from <em>TouchScript/Prefabs</em> folder to see where your touch points lend.</p>
+                        <p>Now if you press Play you can click anywhere in Game view and a nice cian touch cursor with id will appear. The library automatically created <code>TouchScript</code> GameObject in Scene Hierarchy with <code>Touch Manager</code> and <code>Mouse Input</code> Behaviors attached. They are created automatically if no <em>Touch Manager</em> and <em>Input Source</em> instance exhist. If run on a tablet <code>Mobile Input</code> is created instead.</p>
+                        <p>A good practice is to create them manually because this way you can set their parameters and add more input sources.</p>
+                        <p><code>3.</code> <b>Create a new GameObject named <em>TouchScript</em>.</b></p>
+                        <p>Actually, it doesn't matter how you call it.</p>
+                        <p><code>4.</code> <b>Add <code>Touch Manager</code> and <code>Mouse Input</code> behaviors to this GameObject.</b></p>
+                        <p>If you press Play you'll see the same behavior as before. But now you can add <code>TUIO Input</code> which will be listening for touch data at port <em>3333</em> and you can use <a href="https://itunes.apple.com/us/app/tuiopad/id412446962">TUIOPad on iOs</a> or <a href="https://play.google.com/store/apps/details?id=tuioDroid.impl&hl=en">TUIODroid on Android</a> to test multi-touch interaction.</p>
+                        <p><code>5.</code> <b>Add a plane, some lights and a simple Cube with <code>Rigid Body</code> component attached.</b></p>
+                        <p><code>6.</code> <b>Make a prefab from it.</b></p>
+                        <p>You'll end up with something like this:</p>
                         <p><img src="img/tutorial-u-1/1.png" width="690" height="222"/></p>
-                        <p>Create a simple c# script file, call it <code>Breaker</code>. Paste this code:</p>
+                        <p><code>7.</code> <b>Create a simple c# script file, call it <code>Breaker</code>.</b></p>
+                        <p>Paste this code:</p>
                         <pre class="prettyprint linenums lang-csh">
 using UnityEngine;
 using TouchScript.Gestures;
@@ -202,7 +210,7 @@ public class Breaker : MonoBehaviour
 
     private void Start()
     {
-        GetComponent<TapGesture>().StateChanged += HandleStateChanged;
+        GetComponent&lt;TapGesture>().StateChanged += HandleStateChanged;
     }
 
     private void HandleStateChanged(object sender, TouchScript.Events.GestureStateChangeEventArgs e)
@@ -228,9 +236,20 @@ public class Breaker : MonoBehaviour
     }
 }
 </pre>
-                        <p>Add it to the cube prefab and assign it as a value of <em>Cube Prefab</em> property. Now press Play and test how <code>Tap Gesture</code> works by clicking the cubes. For better experience get an iPad and run TUIOPad on it.</p>
+                        <p><code>8.</code> <b>Add it to the cube prefab and assign it as a value of <em>Cube Prefab</em> property.</b></p>
+                        <p>Press Play and test how <code>Tap Gesture</code> works by clicking the cubes. For better experience get an iPad and run TUIOPad on it.</p>
                         <p><img src="img/tutorial-u-1/2.png" width="690" height="222"/></p><br/>
-                        
+                        <p>Now let's get back to the code. Line 22.</p>
+                        <pre class="prettyprint linenums lang-csh">
+GetComponent&lt;TapGesture>().StateChanged += HandleStateChanged;
+</pre>
+                        <p>To get notified when a gesture is recognized you need to subscribe to its <code>StateChanged</code> event.</p>
+                        <pre class="prettyprint linenums lang-csh">
+if (e.State == Gesture.GestureState.Recognized)
+</pre>
+                        <p>At line 27 we check if this state change is indeed what we are interested in — <code>GestureState.Recognized</code>, because gestures change states all the time. Most common ones are <code>Possible</code> and <code>Failed</code>.</p>
+                        <p>After that the cube just spawns 8 smaller copies and destroys itself.</p>
+
                         <h4>Unity3d — Advanced</h4>
                         <p>In this tutorial we will not build a scene from scratch. Instead we will look at the exhisting example.</p>
                         <p><img src="img/tutorial-u-2/2.png" width="690" height="250"/></p>
