@@ -2,7 +2,7 @@
 <html>
 
 <head>
-<title>TouchScript - Table of Content</title>
+<title>A Sandcastle Documented Class Library - Table of Content</title>
 <link rel="stylesheet" href="TOC.css">
 <link rel="shortcut icon" href="favicon.ico"/>
 <script type="text/javascript" src="TOC.js"></script>
@@ -101,7 +101,7 @@ foreach($nodes as $node)
 
 <div id="TOCSizer" class="TOCSizer" onmousedown="OnMouseDown(event)" onselectstart="javascript: return false;"></div>
 
-<iframe id="TopicContent" name="TopicContent" class="TopicContent" src="html/1dc156f5-5ba3-e46b-fb7d-e4c6670bf52d.htm">
+<iframe id="TopicContent" name="TopicContent" class="TopicContent" src="html/R_Project_Documentation.htm">
 This page uses an IFRAME but your browser does not support it.
 </iframe>
 
