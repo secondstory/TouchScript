@@ -83,7 +83,10 @@
                         <li><a href="#docs"><i class="icon-chevron-right"></i> Documentation</a></li>
                         <li><a href="#description"><i class="icon-chevron-right"></i> Description</a></li>
                         <li><a href="#examples"><i class="icon-chevron-right"></i> Examples</a></li>
-                        <li><a href="#tutorials"><i class="icon-chevron-right"></i> Tutorials</a></li>
+                        <li><a href="#mac"><i class="icon-chevron-right"></i> Building on Mac</a></li>
+                        <li><a href="#tutorials_basic"><i class="icon-chevron-right"></i> Tutorials: Basic</a></li>
+                        <li><a href="#tutorials_advanced"><i class="icon-chevron-right"></i> Tutorials: Advanced</a></li>
+                        <li><a href="#tutorials_flash"><i class="icon-chevron-right"></i> Tutorials: Flash</a></li>
                         <li><a href="#history   "><i class="icon-chevron-right"></i> Versions history</a></li>
                     </ul>
                 </div>
@@ -151,6 +154,7 @@
                         <h4>Flash</h4>
                         <p>The latest stable version can be found in <a href="https://github.com/InteractiveLab/TouchScript.as3">Master branch on GitHub</a>.<br/><a href="https://github.com/InteractiveLab/TouchScript.as3/tree/develop">Develop branch</a> is usually more up-to-date but may contain more bugs.</p>
                     </section>
+
                     <section id="examples">
                         <h2>Examples</h2>
                         <h4>Unity3d</h4>
@@ -170,9 +174,25 @@
                         <li><b>TestScaleformProject</b> — used with <em>Basic Scaleform</em>, handles touch events coming from Unity via <em>ScaleformInput</em>.</li>
                         </ol></p>
                     </section> 
-                    <section id="tutorials">
-                        <h2>Tutorials</h2>
-                        <h4>Unity3d — Basic</h4>
+
+                    <section id="mac">
+                        <h2>Building on Mac</h2>
+                        <p>To build the project with MonoDevelop you just need to do the following:
+                        <ol>
+                            <li>Open TouchScript.sln in MonoDevelop.</li>
+                            <li>Add UnityEngine.dll and UnityEditor.dll libraries to references instead of broken links.<br/>
+                            They are probably here: <code>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/</code>.</li>
+                            <li>Right-click on imported DLLs and uncheck <em>Local copy</em>.</li>
+                            <li>Right-click on <strong>TouchScript project -> Options -> Build -> Custom commands</strong>.<br/>
+                            Add this <em>After Build</em> command to <strong>Release</strong> configuration:<br/>
+                            <code>/bin/sh -c 'cp ${TargetDir}/*.* "${SolutionDir}/Examples/General Examples/Assets/TouchScript/Plugins/" | cp ${TargetDir}/*.* "${SolutionDir}/Examples/Scaleform Examples/Assets/TouchScript/Plugins/"'</code> to copy compiled DLLs to example projects.</li>
+                            <li>Do the same with <strong>TouchScript.Editor</strong> project using this command:<br/>
+                            <code>/bin/sh -c 'cp ${TargetDir}/*.* "${SolutionDir}/Examples/General Examples/Assets/TouchScript/Editor/" | cp ${TargetDir}/*.* "${SolutionDir}/Examples/Scaleform Examples/Assets/TouchScript/Editor/"'</code></li>
+                        </ol></p>
+                    </section> 
+
+                    <section id="tutorials_basic">
+                        <h2>Tutorials: Basic</h2>
                         <p><code>1.</code> <b>Create a new project.</b></p>
                         <p><code>2.</code> <b>Either import <code>TouchScript.unitypackage</code> or copy <code>TouchScript</code> folder from examples to <em>Assets</em> folder.</b></p>
                         <p>Drag and drop <code>Debug Camera</code> from <em>TouchScript/Prefabs</em> folder to see where your touch points lend.</p>
@@ -249,8 +269,10 @@ if (e.State == Gesture.GestureState.Recognized)
 </pre>
                         <p>At line 27 we check if this state change is indeed what we are interested in — <code>GestureState.Recognized</code>, because gestures change states all the time. Most common ones are <code>Possible</code> and <code>Failed</code>.</p>
                         <p>After that the cube just spawns 8 smaller copies and destroys itself.</p>
+                    </section>
 
-                        <h4>Unity3d — Advanced</h4>
+                    <section id="tutorials_advanced">
+                        <h2>Tutorials: Advanced</h4>
                         <p>In this tutorial we will not build a scene from scratch. Instead we will look at the exhisting example.</p>
                         <p><img src="img/tutorial-u-2/2.png" width="690" height="250"/></p>
                         <p>Open <code>Everything Combined Example.unity</code> from default examples. You'll see a strange structure made of cubes and 3 colored cubes on foreground. First of all let's take a look at <code>TouchScript</code> GameObject.</p>
@@ -297,8 +319,10 @@ private void onPress(object sender, GestureStateChangeEventArgs e)
                     <p><img src="img/tutorial-u-2/4.png" width="210" height="212" style="margin-right: 10px; float: left"/>The structure consists of a big cube and six sides. Every side has a yellow button.</p>
                     <p>And all these gestures work together. For example check out <code>Scale Gesture</code> on <code>Big Cube</code>. In <code>Will Recognize With</code> array it got a link to <code>Rotate Gesture</code> on the same object which says that these two gestures can work together, so the object can be rotated and scaled simultaneously.</p>
                     <p>Press Play and try to work with the structure. Would be better if you had a multi-touch enabled device or used TUIOPad.</p><br/><br/>
+                </section>
 
-                    <h4>Flash</h4>
+                <section id="tutorials_flash">
+                    <h2>Tutorials: Flash</h2>
                     <p>Let's check out how <code>TestProject</code> is done.</p>
                     <p><code>TestProject.as</code> contains initialization code:</p>
                     <pre class="prettyprint linenums lang-as3">
