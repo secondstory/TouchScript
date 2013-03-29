@@ -83,7 +83,6 @@
                         <li><a href="#docs"><i class="icon-chevron-right"></i> Documentation</a></li>
                         <li><a href="#description"><i class="icon-chevron-right"></i> Description</a></li>
                         <li><a href="#examples"><i class="icon-chevron-right"></i> Examples</a></li>
-                        <li><a href="#mac"><i class="icon-chevron-right"></i> Building on Mac</a></li>
                         <li><a href="#tutorials_basic"><i class="icon-chevron-right"></i> Tutorials: Basic</a></li>
                         <li><a href="#tutorials_advanced"><i class="icon-chevron-right"></i> Tutorials: Advanced</a></li>
                         <li><a href="#tutorials_flash"><i class="icon-chevron-right"></i> Tutorials: Flash</a></li>
@@ -148,8 +147,11 @@
                         <li>Windows 7 touch recognition doesn't work in Unity IDE.</li>
                         <li>The library relies on C# events so it doesn't work with JavaScript.</li>
                         </ul>
-                        <h5>Before building</h5>
+                        <h5>Before building: Windows</h5>
                         <p>Copy <code>UnityEngine.dll</code> and <code>UnityEditor.dll</code> to <code>Lib</code> folder since the framework links to it. If anyone knows a better way of doing this without hardcoding paths or setting system variables, please let us know.</p>
+                        <h5>Before building: OS X</h5>
+                        <p>Copy <code>UnityEngine.dll</code> and <code>UnityEditor.dll</code> to <code>Lib</code> folder.<br/>
+                        They are probably located here: <code>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/</code>.</p>
 
                         <h4>Flash</h4>
                         <p>The latest stable version can be found in <a href="https://github.com/InteractiveLab/TouchScript.as3">Master branch on GitHub</a>.<br/><a href="https://github.com/InteractiveLab/TouchScript.as3/tree/develop">Develop branch</a> is usually more up-to-date but may contain more bugs.</p>
@@ -172,22 +174,6 @@
                         <ol>
                         <li><b>TestProject</b> — shows how to set up the environment and how most of the gestures work.</li>
                         <li><b>TestScaleformProject</b> — used with <em>Basic Scaleform</em>, handles touch events coming from Unity via <em>ScaleformInput</em>.</li>
-                        </ol></p>
-                    </section> 
-
-                    <section id="mac">
-                        <h2>Building on Mac</h2>
-                        <p>To build the project with MonoDevelop you just need to do the following:
-                        <ol>
-                            <li>Open TouchScript.sln in MonoDevelop.</li>
-                            <li>Add UnityEngine.dll and UnityEditor.dll libraries to references instead of broken links.<br/>
-                            They are probably here: <code>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/</code>.</li>
-                            <li>Right-click on imported DLLs and uncheck <em>Local copy</em>.</li>
-                            <li>Right-click on <strong>TouchScript project -> Options -> Build -> Custom commands</strong>.<br/>
-                            Add this <em>After Build</em> command to <strong>Release</strong> configuration:<br/>
-                            <code>/bin/sh -c 'cp ${TargetDir}/*.* "${SolutionDir}/Examples/General Examples/Assets/TouchScript/Plugins/" | cp ${TargetDir}/*.* "${SolutionDir}/Examples/Scaleform Examples/Assets/TouchScript/Plugins/"'</code> to copy compiled DLLs to example projects.</li>
-                            <li>Do the same with <strong>TouchScript.Editor</strong> project using this command:<br/>
-                            <code>/bin/sh -c 'cp ${TargetDir}/*.* "${SolutionDir}/Examples/General Examples/Assets/TouchScript/Editor/" | cp ${TargetDir}/*.* "${SolutionDir}/Examples/Scaleform Examples/Assets/TouchScript/Editor/"'</code></li>
                         </ol></p>
                     </section> 
 
