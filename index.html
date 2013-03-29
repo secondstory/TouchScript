@@ -137,8 +137,27 @@
                     </section>
                     <section id="description">
                         <h2>Description</h2>
-                        <p><code>TouchScript</code> consists of a number of components to configure touch and gesture recognition plus common gesture implementations. Gesture recognition works very similar to iOS: a number of gesture recognizers (called simply Gestures) attached to scene objects (GameObject in Unity3d and InteractiveObject in AS3) receive touch point events and change state if they recognize a sequence of touch events as a gesture. If there are no active gestures in recognized gesture's hierarchy (or it can work in parallel with exhisting active gestures) it is added in the list of active gestures for an object it is attached to and now can exclusively receive touch events from that object and its children.</p>
+                        <p><code>TouchScript</code> consists of a number of components to configure touch and gesture recognition plus common gesture implementations. Gesture recognition works very similar to iOS: a number of gesture recognizers (simply called Gestures) attached to scene objects (GameObject in Unity3d and InteractiveObject in AS3) receive touch point events and change state if they recognize a sequence of touch events as a gesture.</p>
                         <p>This approach makes it very easy to code complex multi-touch interfaces. For example, you got a window and several buttons as its children. You want to be able to drag both windows and tap buttons. It gets complicated when user presses a button and starts dragging it. TouchScript handles this for you.</p>
+
+                        <h4>Gestures</h4>
+                        <p>Gestures handle touch input. They are always attached to scene objects and use their hierarchy to determine which gestures can be recognized.</p>
+                        <p>There are two types of gestures — discrete and continuous. Descrete gestures when recognized set their state to <strong>Recognized</strong> and reset in a frame, while continuous ones if recognized change state to <strong>Began</strong> and keep updating with state <strong>Changed</strong>. When continuous gesture finishes it sets state to <strong>Ended</strong>.</p>
+                        <p>When a touch begins over an object, every gesture in hierarchy from root to this object gets this touch. If after that one of them wants to be recognized and there are no active gestures in recognized gesture's hierarchy (or it can work in parallel with exhisting active gestures) it is added in the list of active gestures for an object it is attached to and now can exclusively receive touch events from that object and its children.</p>
+                        <p>These are the gestures included:
+                        <ul>
+                            <li><code>Press</code> <em>(discrete)</em> — fires when the first touch is added to an object.</li>
+                            <li><code>Release</code> <em>(discrete)</em> — fires when the last touch is removed from an object.</li>
+                            <li><code>Tap</code> <em>(continuous)</em> — begins when the first touch is added, ends (recognizes) if a user lifts off last finger from the object within certain time and movement delta.</li>
+                            <li><code>Long Press</code> <em>(continuous)</em> — begins when the first touch is added, ends (recognizes) if a user doesn't lift off last finger from the object for certain time.</li>
+                            <li><code>Pan</code> <em>(continuous)</em> — begins when user starts dragging an object and ends when the last finger is removed.</li>
+                            <li><code>Scale</code> <em>(continuous)</em> — begins when user starts scaling an object and ends when one or less touch points left.</li>
+                            <li><code>Rotate</code> <em>(continuous)</em> — begins when user starts rotating an object and ends when one or less touch points left.</li>
+                            <li><code>Flick</code> <em>(discrete)</em> — recognizes when fingers are moved fast during short period of time before lifting off.</li>
+                            <li><code>Meta</code> <em>(continuous)</em> — gesture which translates changes in touch points into C# events.</li>
+                        </ul>
+                        </p>
+                        <p><span class="label label-important">NOTE:</span> Meta Gesture is sort of a <em>hack</em> to get touch points from an object and still be in gestures hierarchy. You should <strong>never</strong> base your gesture recognition logic on <em>Meta Gesture</em>. Write your own gesture class if you want to handle touch points in some special way.</p>
 
                         <h4>Unity3d</h4>
                         <p>The latest stable version can be found in <a href="https://github.com/InteractiveLab/TouchScript">Master branch on GitHub</a>.<br/><a href="https://github.com/InteractiveLab/TouchScript/tree/develop">Develop branch</a> is usually more up-to-date but may contain more bugs.</p>
