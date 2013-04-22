@@ -33,7 +33,7 @@
                 <li class="logo"><h2>TouchScript</h2></li>
                 <li>GitHub (<a href="https://github.com/InteractiveLab/TouchScript">Unity</a>, <a href="https://github.com/InteractiveLab/TouchScript.as3">Flash</a>)</li>
                 <li>|</li>
-                <li><a href="files/TouchScript.2.0b3.unitypackage">Download Unity Package</a></li>
+                <li><a href="files/TouchScript.2.0.unitypackage">Download Unity Package</a></li>
                 <li>|</li>
                 <li>Issues (<a href="https://github.com/InteractiveLab/TouchScript/issues">Unity</a>, <a href="https://github.com/InteractiveLab/TouchScript.as3/issues">Flash</a>)</li>
             </ul>
@@ -103,7 +103,7 @@
                         <li>Comes with many commonly used gestures. Easy to write custom ones.</li>
                         <li>Supported input sources: TUIO, mouse, iOS and native Windows 7 touch.</li>
                         <li>Groups touch points into clusters on big touch surfaces.</li>
-                        <li>Easy to test multi-touch gestures without actual multi-touch device using <a href="https://itunes.apple.com/us/app/tuiopad/id412446962">TUIOPad on iOs</a> or <a href="https://play.google.com/store/apps/details?id=tuioDroid.impl&hl=en">TUIODroid on Android</a>.</li>
+                        <li>Easy to test multi-touch gestures without actual multi-touch device using built-in second touch simulator (activated with ALT+click), <a href="https://itunes.apple.com/us/app/tuiopad/id412446962">TUIOPad on iOs</a> or <a href="https://play.google.com/store/apps/details?id=tuioDroid.impl&hl=en">TUIODroid on Android</a>.</li>
                         <li>It's free and open-source. Licensed under MIT license.</li>
                         </p>
                     </section>
@@ -208,7 +208,7 @@
                         <p><code>4.</code> <b>Add <code>Touch Manager</code> and <code>Mouse Input</code> behaviors to this GameObject.</b></p>
                         <p>If you press Play you'll see the same behavior as before. But now you can add <code>TUIO Input</code> which will be listening for touch data at port <em>3333</em> and you can use <a href="https://itunes.apple.com/us/app/tuiopad/id412446962">TUIOPad on iOs</a> or <a href="https://play.google.com/store/apps/details?id=tuioDroid.impl&hl=en">TUIODroid on Android</a> to test multi-touch interaction.</p>
                         <p><code>5.</code> <b>Add a plane, some lights and a simple Cube with <code>Rigid Body</code> component attached.</b></p>
-                        <p><code>6.</code> <b>Make a prefab from it.</b></p>
+                        <p><code>6.</code> <b>Attach <code>TapGesture</code> to the Cube and make a prefab from it.</b></p>
                         <p>You'll end up with something like this:</p>
                         <p><img src="img/tutorial-u-1/1.png" width="690" height="222"/></p>
                         <p><code>7.</code> <b>Create a simple c# script file, call it <code>Breaker</code>.</b></p>
@@ -323,7 +323,7 @@ private void onPress(object sender, GestureStateChangeEventArgs e)
                     </ul></p>
                     <p><img src="img/tutorial-u-2/4.png" width="210" height="212" style="margin-right: 10px; float: left"/>The structure consists of a big cube and six sides. Every side has a yellow button.</p>
                     <p>And all these gestures work together. For example check out <code>Scale Gesture</code> on <code>Big Cube</code>. In <code>Will Recognize With</code> array it got a link to <code>Rotate Gesture</code> on the same object which says that these two gestures can work together, so the object can be rotated and scaled simultaneously.</p>
-                    <p>Press Play and try to work with the structure. Would be better if you had a multi-touch enabled device or used TUIOPad.</p><br/><br/>
+                    <p>Press Play and try to work with the structure. Of course, it would be better if you had a multi-touch enabled device or used TUIOPad, but you can use debug mode with MouseInput which creates a second stationary touch when you press <code>ALT+click</code>.</p><br/><br/>
                 </section>
 
                 <section id="tutorials_flash">
@@ -360,6 +360,18 @@ scaleGesture.shouldRecognizeSimultaneouslyWith(rotateGesture, true);
                     </section>
                     <section id="history">
                         <h2>Version history - Unity3d:</h2>
+                        <h4>2.0</h4>
+                        <p><ul>
+                        <li>Upgraded HitTest mechanics. Now it skips disabled cameras and it's possible to ignore specific layers via Layer Mask. Added a special example illustrating this.</li>
+                        <li>Win7TouchInput and MouseInput detect if they are run on iOS or Android and don't cause any trouble.</li>
+                        <li>More mac-friendly build process.</li>
+                        <li>Fixed MetaGesture to work on iOS and added it to examples.</li>
+                        <li>Made LongPressGesture and TapGesture more continuous.</li>
+                        <li>Moved TuioInput to separate DLL so it doesn't cause troubles for Unity iOS indie users.</li>
+                        <li>Refactored gestures and added tips to custom editors.</li>
+                        <li>Added second touch simulator to MouseInput which is activated with ALT+click.</li>
+                        </ul></p>
+
                         <h4>2.0b3</h4>
                         <p><ul>
                         <li>Major refactoring.</li>
