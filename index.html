@@ -84,6 +84,7 @@
                         <li><a href="#description"><i class="icon-chevron-right"></i> Description</a></li>
                         <li><a href="#examples"><i class="icon-chevron-right"></i> Examples</a></li>
                         <li><a href="#tutorials"><i class="icon-chevron-right"></i> Tutorials</a></li>
+                        <li><a href="#faq"><i class="icon-chevron-right"></i> FAQ</a></li>
                         <li><a href="#history   "><i class="icon-chevron-right"></i> Versions history</a></li>
                     </ul>
                 </div>
@@ -103,8 +104,10 @@
                         <li>Groups touch points into clusters on big touch surfaces.</li>
                         <li>Easy to test multi-touch gestures without actual multi-touch device using built-in second touch simulator (activated with ALT+click), <a href="https://itunes.apple.com/us/app/tuiopad/id412446962">TUIOPad on iOs</a> or <a href="https://play.google.com/store/apps/details?id=tuioDroid.impl&hl=en">TUIODroid on Android</a>.</li>
                         <li>It's free and open-source. Licensed under MIT license.</li>
-                        </p>
+                        </p><br/>
+                        <p><span class="label label-important">NOTE:</span> if you got a problem using <code>TouchScript</code> or running examples please check the <strong><a href="#faq">FAQ</a></strong> first.</p>
                     </section>
+
                     <section id="versions">    
                         <h2>Versions</h2>
                         <p><code>TouchScript</code> was originally developed in ActionScript 3 for Flash, rewritten from scratch in C# for Unity3d and at the moment Unity3d branch is where most of the development takes place. AS3 version as a little brother gets all the new features with a slight delay.<br/></p>
@@ -125,6 +128,7 @@
                         <li>Works standalone, in Scaleform and in iOS/Android apps.</li>
                         </ul></p>
                     </section>
+
                     <section id="docs">
                         <h2>Help and Documentation</h2>
                         <p><ul>
@@ -133,6 +137,7 @@
                         </ul></p>
                         <p>If you have any questions feel free to ask them at <a href="https://github.com/InteractiveLab/TouchScript/issues">the issues section</a> on GitHub.</p>
                     </section>
+
                     <section id="description">
                         <h2>Description</h2>
                         <p><code>TouchScript</code> consists of a number of components to configure touch and gesture recognition plus common gesture implementations. Gesture recognition works very similar to iOS: a number of gesture recognizers (simply called Gestures) attached to scene objects (GameObject in Unity3d and InteractiveObject in AS3) receive touch point events and change state if they recognize a sequence of touch events as a gesture.</p>
@@ -205,6 +210,14 @@
                         <p>Flash:
                         <ul>
                             <li><a href="tutorials.as3.html#basic">Basic</a></li>
+                        </ul></p>
+                    </section>
+
+                    <section id="faq">
+                        <h2>Frequently Asked Questions</h2>
+                        <p><ul>
+                            <li><strong>Why TUIO/Windows 7 touch/iOS touch doesn't work?</strong><br/>You most likely haven't added an appropriate touch source. To recieve TUIO messages add somewhere in the scene <code>TuioInput</code> behavior. For getting Win7 touch input add <code>Win7TouchInput</code>, and for mobile devices add <code>MobileInput</code>.</li>
+                            <li><strong>Why gestures don't work together?</strong><br/>For gestures to be recognized simultaneously you need to put one into another one's <code>willRecognizeWith</code> array in inspector or call <code>ShouldRecognizeSimultaneouslyWith(gesture, true);</code>.</li>
                         </ul></p>
                     </section>
 

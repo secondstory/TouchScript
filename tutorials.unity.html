@@ -50,8 +50,8 @@
                             <li>Basic tutorial covers the setup needed to start using TouchScript.</li>
                             <li>Advanced tutorial shows how to make different gestures in hierarchy work together.</li>
                         </ol></p>
-                        <br/><br/>
                     </section>
+
                     <section id="basic">
                         <h2>Basic tutorial</h2><br/>
                         <p><code>1.</code> <b>Create a new project.</b></p>
@@ -129,7 +129,7 @@ GetComponent&lt;TapGesture>().StateChanged += HandleStateChanged;
 if (e.State == Gesture.GestureState.Recognized)
 </pre>
                         <p>At line 27 we check if this state change is indeed what we are interested in — <code>GestureState.Recognized</code>, because gestures change states all the time. Most common ones are <code>Possible</code> and <code>Failed</code>.</p>
-                        <p>After that the cube just spawns 8 smaller copies and destroys itself.</p><br/><br/>
+                        <p>After that the cube just spawns 8 smaller copies and destroys itself.</p>
                     </section>
 
                     <section id="advanced">
@@ -179,7 +179,7 @@ private void onPress(object sender, GestureStateChangeEventArgs e)
                         </ul></p>
                         <p><img src="img/tutorial-u-2/4.png" width="210" height="212" style="margin-right: 10px; float: left"/>The structure consists of a big cube and six sides. Every side has a yellow button.</p>
                         <p>And all these gestures work together. For example check out <code>Scale Gesture</code> on <code>Big Cube</code>. In <code>Will Recognize With</code> array it got a link to <code>Rotate Gesture</code> on the same object which says that these two gestures can work together, so the object can be rotated and scaled simultaneously.</p>
-                        <p>Press Play and try to work with the structure. Of course, it would be better if you had a multi-touch enabled device or used TUIOPad, but you can use debug mode with MouseInput which creates a second stationary touch when you press <code>ALT+click</code>.</p><br/><br/>
+                        <p>Press Play and try to work with the structure. Of course, it would be better if you had a multi-touch enabled device or used TUIOPad, but you can use debug mode with MouseInput which creates a second stationary touch when you press <code>ALT+click</code>.</p>
                     </section>
                 </div>
             </div>

@@ -9,6 +9,10 @@ body {
   color: #444;
 }
 
+section {
+  padding-bottom: 20px;
+}
+
 a {
   color: #76828D;
   text-decoration: underline;
