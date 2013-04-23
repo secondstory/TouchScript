@@ -83,9 +83,7 @@
                         <li><a href="#docs"><i class="icon-chevron-right"></i> Documentation</a></li>
                         <li><a href="#description"><i class="icon-chevron-right"></i> Description</a></li>
                         <li><a href="#examples"><i class="icon-chevron-right"></i> Examples</a></li>
-                        <li><a href="#tutorials_basic"><i class="icon-chevron-right"></i> Tutorials: Basic</a></li>
-                        <li><a href="#tutorials_advanced"><i class="icon-chevron-right"></i> Tutorials: Advanced</a></li>
-                        <li><a href="#tutorials_flash"><i class="icon-chevron-right"></i> Tutorials: Flash</a></li>
+                        <li><a href="#tutorials"><i class="icon-chevron-right"></i> Tutorials</a></li>
                         <li><a href="#history   "><i class="icon-chevron-right"></i> Versions history</a></li>
                     </ul>
                 </div>
@@ -196,168 +194,20 @@
                         </ol></p>
                     </section> 
 
-                    <section id="tutorials_basic">
-                        <h2>Tutorials: Basic</h2>
-                        <p><code>1.</code> <b>Create a new project.</b></p>
-                        <p><code>2.</code> <b>Either import <code>TouchScript.unitypackage</code> or copy <code>TouchScript</code> folder from examples to <em>Assets</em> folder.</b></p>
-                        <p>Drag and drop <code>Debug Camera</code> from <em>TouchScript/Prefabs</em> folder to see where your touch points lend.</p>
-                        <p>Now if you press Play you can click anywhere in Game view and a nice cian touch cursor with id will appear. The library automatically created <code>TouchScript</code> GameObject in Scene Hierarchy with <code>Touch Manager</code> and <code>Mouse Input</code> Behaviors attached. They are created automatically if no <em>Touch Manager</em> and <em>Input Source</em> instance exhist. If run on a tablet <code>Mobile Input</code> is created instead.</p>
-                        <p>A good practice is to create them manually because this way you can set their parameters and add more input sources.</p>
-                        <p><code>3.</code> <b>Create a new GameObject named <em>TouchScript</em>.</b></p>
-                        <p>Actually, it doesn't matter how you call it.</p>
-                        <p><code>4.</code> <b>Add <code>Touch Manager</code> and <code>Mouse Input</code> behaviors to this GameObject.</b></p>
-                        <p>If you press Play you'll see the same behavior as before. But now you can add <code>TUIO Input</code> which will be listening for touch data at port <em>3333</em> and you can use <a href="https://itunes.apple.com/us/app/tuiopad/id412446962">TUIOPad on iOs</a> or <a href="https://play.google.com/store/apps/details?id=tuioDroid.impl&hl=en">TUIODroid on Android</a> to test multi-touch interaction.</p>
-                        <p><code>5.</code> <b>Add a plane, some lights and a simple Cube with <code>Rigid Body</code> component attached.</b></p>
-                        <p><code>6.</code> <b>Attach <code>TapGesture</code> to the Cube and make a prefab from it.</b></p>
-                        <p>You'll end up with something like this:</p>
-                        <p><img src="img/tutorial-u-1/1.png" width="690" height="222"/></p>
-                        <p><code>7.</code> <b>Create a simple c# script file, call it <code>Breaker</code>.</b></p>
-                        <p>Paste this code:</p>
-                        <pre class="prettyprint linenums lang-csh">
-using UnityEngine;
-using TouchScript.Gestures;
-
-public class Breaker : MonoBehaviour
-{
-    public Transform CubePrefab;
-    public float Power = 10.0f;
-
-    private Vector3[] directions = {
-                                   new Vector3(1, -1, 1),
-                                   new Vector3(-1, -1, 1),
-                                   new Vector3(-1, -1, -1),
-                                   new Vector3(1, -1, -1),
-                                   new Vector3(1, 1, 1),
-                                   new Vector3(-1, 1, 1),
-                                   new Vector3(-1, 1, -1),
-                                   new Vector3(1, 1, -1)
-                               };
-
-    private void Start()
-    {
-        GetComponent&lt;TapGesture>().StateChanged += HandleStateChanged;
-    }
-
-    private void HandleStateChanged(object sender, TouchScript.Events.GestureStateChangeEventArgs e)
-    {
-        if (e.State == Gesture.GestureState.Recognized)
-        {
-            if (transform.localScale.x > 0.05f)
-            {
-                Color color = new Color(Random.value, Random.value, Random.value);
-                for (int i = 0; i < 8; i++)
-                {
-                    var c = Instantiate(CubePrefab) as Transform;
-                    c.parent = transform.parent;
-                    c.name = "Cube";
-                    c.localScale = 0.5f*transform.localScale;
-                    c.position = transform.TransformPoint(c.localScale.x/10.0f*directions[i]);
-                    c.rigidbody.velocity = Power*Random.insideUnitSphere;
-                    c.renderer.material.color = color;
-                }
-            }
-            Destroy(gameObject);
-        }
-    }
-}
-</pre>
-                        <p><code>8.</code> <b>Add it to the cube prefab and assign it as a value of <em>Cube Prefab</em> property.</b></p>
-                        <p>Press Play and test how <code>Tap Gesture</code> works by clicking the cubes. For better experience get an iPad and run TUIOPad on it.</p>
-                        <p><img src="img/tutorial-u-1/2.png" width="690" height="222"/></p><br/>
-                        <p>Now let's get back to the code. Line 22.</p>
-                        <pre class="prettyprint linenums lang-csh">
-GetComponent&lt;TapGesture>().StateChanged += HandleStateChanged;
-</pre>
-                        <p>To get notified when a gesture is recognized you need to subscribe to its <code>StateChanged</code> event.</p>
-                        <pre class="prettyprint linenums lang-csh">
-if (e.State == Gesture.GestureState.Recognized)
-</pre>
-                        <p>At line 27 we check if this state change is indeed what we are interested in — <code>GestureState.Recognized</code>, because gestures change states all the time. Most common ones are <code>Possible</code> and <code>Failed</code>.</p>
-                        <p>After that the cube just spawns 8 smaller copies and destroys itself.</p>
+                    <section id="tutorials">
+                        <h2>Tutorials</h4>
+                        <p>Tutorials show how to use TouchScript.</p>
+                        <p>Unity3d:
+                        <ul>
+                            <li><a href="tutorials.unity.html#basic">Basic</a></li>
+                            <li><a href="tutorials.unity.html#advanced">Advanced</a></li>
+                        </ul></p>
+                        <p>Flash:
+                        <ul>
+                            <li><a href="tutorials.as3.html#basic">Basic</a></li>
+                        </ul></p>
                     </section>
 
-                    <section id="tutorials_advanced">
-                        <h2>Tutorials: Advanced</h4>
-                        <p>In this tutorial we will not build a scene from scratch. Instead we will look at the exhisting example.</p>
-                        <p><img src="img/tutorial-u-2/2.png" width="690" height="250"/></p>
-                        <p>Open <code>Everything Combined Example.unity</code> from default examples. You'll see a strange structure made of cubes and 3 colored cubes on foreground. First of all let's take a look at <code>TouchScript</code> GameObject.</p>
-                        <p><img src="img/tutorial-u-2/1.png" width="210" height="93" style="margin-right: 10px; float: left"/>Notice that now we got two camera layers. They are attached to <code>2d Camera</code> and <code>3d Camera</code>. Layers is a way to specify the order in which the library looks for objects hit by touch points. In this example the topmost camera rendering 2d RGB buttons is tested first and after that the 3d camera is used. If there's no layer in scene the library adds one to the main camera.</p>
-                        <p>Now let's check the RGB buttons which are seen by <code>2d Camera</code>. They got several scripts attached:
-                            <ul>
-                                <li><code>Button</code> — listens for <code>Long Press Gesture</code> and changes main cube's color.</li>
-                                <li><code>Long Press Gesture</code> — fires if a user have been holding a button for more than a second.</li>
-                                <li><code>Press Gesture</code> — fires when an object is pressed.</li>
-                                <li><code>Release Gesture</code> — fires when an object is released.</li>
-                                <li><code>Bump</code> — listens for <code>Press Gesture</code> and <code>Release Gesture</code> to change scale.</li>
-                            </ul></p>
-                        <p><img src="img/tutorial-u-2/3.png" width="690" height="274"/></p>
-                        <p>Listening for gesture events is simple. This is pretty much all the code in <code>Bump</code> component:</p>
-                        <pre class="prettyprint linenums lang-csh">
-private void Start()
-{
-    if (GetComponent&lt;PressGesture>() != null) GetComponent&lt;PressGesture>().StateChanged += onPress;
-    if (GetComponent&lt;ReleaseGesture>() != null) GetComponent&lt;ReleaseGesture>().StateChanged += onRelease;
-
-    startScale = transform.localScale;
-}
-
-private void onRelease(object sender, GestureStateChangeEventArgs e)
-{
-    if (e.State == Gesture.GestureState.Recognized)
-        transform.localScale = startScale;
-}
-
-private void onPress(object sender, GestureStateChangeEventArgs e)
-{
-    if (e.State == Gesture.GestureState.Recognized)
-        transform.localScale = startScale*.7f;
-}
-</pre>
-                    <p>The rest of the cubes are more interesting. Check out the hierarchy starting from <code>Cubes</code> GameObject.</p>
-                    <p>Every object in hierarchy got a gesture or two attached:
-                    <ul>
-                        <li><code>Cubes</code> can be rotated with a gesture involving two or more fingers.</li>
-                        <li><code>Big Cube</code> can be rotated and scaled separately.</li>
-                        <li>Each <code>Side</code> can be moved away from face it is attached to.</li>
-                        <li>There are <code>Buttons</code> on every side which can be pressed to rotate the whole structure.</li>
-                    </ul></p>
-                    <p><img src="img/tutorial-u-2/4.png" width="210" height="212" style="margin-right: 10px; float: left"/>The structure consists of a big cube and six sides. Every side has a yellow button.</p>
-                    <p>And all these gestures work together. For example check out <code>Scale Gesture</code> on <code>Big Cube</code>. In <code>Will Recognize With</code> array it got a link to <code>Rotate Gesture</code> on the same object which says that these two gestures can work together, so the object can be rotated and scaled simultaneously.</p>
-                    <p>Press Play and try to work with the structure. Of course, it would be better if you had a multi-touch enabled device or used TUIOPad, but you can use debug mode with MouseInput which creates a second stationary touch when you press <code>ALT+click</code>.</p><br/><br/>
-                </section>
-
-                <section id="tutorials_flash">
-                    <h2>Tutorials: Flash</h2>
-                    <p>Let's check out how <code>TestProject</code> is done.</p>
-                    <p><code>TestProject.as</code> contains initialization code:</p>
-                    <pre class="prettyprint linenums lang-as3">
-TouchManager.init(stage);
-_mouseInput = new MouseInput(stage);
-_tuioInput = new TuioInput(stage.stageWidth, stage.stageHeight);
-addChild(new TouchDebugger());
-</pre>
-                    <p>It sets up a <code>Mouse Input</code> and a <code>TUIO Input</code> to test multi-touch gestures.</p>
-                    <p>Inside <code>Example1</code> class you'll see how the whole scene is constructed. There are many boxes placed within other boxes and several gestures attached to them.</p>
-                    <pre class="prettyprint linenums lang-as3">
-var tapGesture:TapGesture = new TapGesture(tap1);
-tapGesture.addEventListener(GestureEvent.STATE_CHANGED, handler_tap_tapped);
-
-private function handler_tap_tapped(e:GestureEvent):void {
-    if (e.state == GestureState.RECOGNIZED) {
-        ((e.target as Gesture).displayTarget as Box).setColor(Defaults.randomColor());
-    }
-}
-</pre>
-                    <p>This is the simplest way to add a <code>Tap Gesture</code> to an <em>InteractiveObject</em>.</p>
-                    <p>To allow gestures work together use <code>shouldRecognizeSimultaneouslyWith</code> which must be called at least once per pair of gestures:</p>
-                    <pre class="prettyprint linenums lang-as3">
-panGesture.shouldRecognizeSimultaneouslyWith(scaleGesture, true);
-panGesture.shouldRecognizeSimultaneouslyWith(rotateGesture, true);
-scaleGesture.shouldRecognizeSimultaneouslyWith(rotateGesture, true);
-</pre>
-                    <p>The final result is not that pretty but clearly shows how to work with gestures in <code>ActionScript 3</code>.</p>
-                    <p><img src="img/tutorial-f-1/1.png" width="690" height="121"/></p>
-                    </section>
                     <section id="history">
                         <h2>Version history - Unity3d:</h2>
                         <h4>2.0</h4>
@@ -381,12 +231,7 @@ scaleGesture.shouldRecognizeSimultaneouslyWith(rotateGesture, true);
                         <li>Added good examples and docs.</li>
                         <li>Integrated Scaleform.</li>
                         <li>Added iOS and Android support.</li>
-                        <li>Fixed several nasty bugs.</li>
-                        </ul></p>
-
-                        <h4>1.0.1</h4>
-                        <p><ul>
-                        <li>Fixed several bugs.</li>
+                        <li>Fixed many bugs.</li>
                         </ul></p>
 
                         <h4>1.0</h4>
@@ -407,6 +252,7 @@ scaleGesture.shouldRecognizeSimultaneouslyWith(rotateGesture, true);
                     </section>
                 </div>
             </div>
+            <div class="footer"><a href="https://github.com/InteractiveLab/TouchScript">TouchScript</a> — multi-touch framework for Unity3d and Flash. Copyright (c) 2013 Interactive Lab.</div>
         </div>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
