@@ -4,18 +4,18 @@
   <HelpKINode Title="activeTouches field" Url="html/F_TouchScript_Gestures_Gesture_activeTouches.htm" />
   <HelpKINode Title="ActiveTouches property" Url="html/P_TouchScript_Gestures_Gesture_ActiveTouches.htm" />
   <HelpKINode Title="AddLayer method" Url="html/M_TouchScript_TouchManager_AddLayer.htm" />
-  <HelpKINode Title="AddPoint method" Url="html/M_TouchScript_Clusters_Cluster_AddPoint.htm" />
-  <HelpKINode Title="AddPoints method" Url="html/M_TouchScript_Clusters_Cluster_AddPoints.htm" />
+  <HelpKINode Title="AddPoint method" Url="html/M_TouchScript_Clusters_Clusters_AddPoint.htm" />
+  <HelpKINode Title="AddPoints method" Url="html/M_TouchScript_Clusters_Clusters_AddPoints.htm" />
   <HelpKINode Title="Any enumeration member" Url="html/T_TouchScript_Gestures_FlickGesture_GestureDirection.htm" />
   <HelpKINode Title="Awake method" Url="html/M_TouchScript_Gestures_Gesture_Awake.htm" />
   <HelpKINode Title="Awake method" Url="html/M_TouchScript_Gestures_LongPressGesture_Awake.htm" />
   <HelpKINode Title="Awake method" Url="html/M_TouchScript_Gestures_Transform2DGestureBase_Awake.htm" />
   <HelpKINode Title="Awake method" Url="html/M_TouchScript_Layers_TouchLayer_Awake.htm" />
   <HelpKINode Title="Began enumeration member" Url="html/T_TouchScript_Gestures_Gesture_GestureState.htm" />
-  <HelpKINode Title="BeginTouch method" Url="html/M_TouchScript_TouchManager_BeginTouch.htm" />
-  <HelpKINode Title="beginTouch method" Url="html/M_TouchScript_InputSources_InputSource_beginTouch.htm" />
   <HelpKINode Title="beginTouch method" Url="html/M_TouchScript_Layers_CameraLayer_beginTouch.htm" />
+  <HelpKINode Title="BeginTouch method" Url="html/M_TouchScript_TouchManager_BeginTouch.htm" />
   <HelpKINode Title="beginTouch method" Url="html/M_TouchScript_Layers_TouchLayer_beginTouch.htm" />
+  <HelpKINode Title="beginTouch method" Url="html/M_TouchScript_InputSources_InputSource_beginTouch.htm" />
   <HelpKINode Title="Camera enumeration member" Url="html/T_TouchScript_Gestures_Transform2DGestureBase_ProjectionType.htm" />
   <HelpKINode Title="Camera property" Url="html/P_TouchScript_Layers_CameraLayer_Camera.htm" />
   <HelpKINode Title="Camera property" Url="html/P_TouchScript_Layers_TouchLayer_Camera.htm" />
@@ -33,45 +33,21 @@
   <HelpKINode Title="CameraLayer.Camera property" Url="html/P_TouchScript_Layers_CameraLayer_Camera.htm" />
   <HelpKINode Title="CameraLayer.CameraLayer constructor" Url="html/M_TouchScript_Layers_CameraLayer__ctor.htm" />
   <HelpKINode Title="CameraLayer.Hit method" Url="html/M_TouchScript_Layers_CameraLayer_Hit.htm" />
+  <HelpKINode Title="CameraLayer.LayerMask property" Url="html/P_TouchScript_Layers_CameraLayer_LayerMask.htm" />
+  <HelpKINode Title="CameraLayer.setName method" Url="html/M_TouchScript_Layers_CameraLayer_setName.htm" />
   <HelpKINode Title="CameraToPlaneProjection method" Url="html/M_TouchScript_Utils_ProjectionUtils_CameraToPlaneProjection.htm" />
   <HelpKINode Title="CanBePreventedByGesture method" Url="html/M_TouchScript_Gestures_Gesture_CanBePreventedByGesture.htm" />
   <HelpKINode Title="CanBePreventedByGesture method" Url="html/M_TouchScript_Gestures_PressGesture_CanBePreventedByGesture.htm" />
   <HelpKINode Title="CanBePreventedByGesture method" Url="html/M_TouchScript_Gestures_ReleaseGesture_CanBePreventedByGesture.htm" />
   <HelpKINode Title="Cancelled enumeration member" Url="html/T_TouchScript_Gestures_Gesture_GestureState.htm" />
   <HelpKINode Title="CancelTouch method" Url="html/M_TouchScript_TouchManager_CancelTouch.htm" />
-  <HelpKINode Title="cancelTouch method" Url="html/M_TouchScript_Layers_TouchLayer_cancelTouch.htm" />
   <HelpKINode Title="cancelTouch method" Url="html/M_TouchScript_InputSources_InputSource_cancelTouch.htm" />
+  <HelpKINode Title="cancelTouch method" Url="html/M_TouchScript_Layers_TouchLayer_cancelTouch.htm" />
   <HelpKINode Title="CanPreventGesture method" Url="html/M_TouchScript_Gestures_Gesture_CanPreventGesture.htm" />
   <HelpKINode Title="CanPreventGesture method" Url="html/M_TouchScript_Gestures_PressGesture_CanPreventGesture.htm" />
   <HelpKINode Title="CanPreventGesture method" Url="html/M_TouchScript_Gestures_ReleaseGesture_CanPreventGesture.htm" />
   <HelpKINode Title="Changed enumeration member" Url="html/T_TouchScript_Gestures_Gesture_GestureState.htm" />
   <HelpKINode Title="ChangeLayerIndex method" Url="html/M_TouchScript_TouchManager_ChangeLayerIndex.htm" />
-  <HelpKINode Title="Cluster class" Url="html/AllMembers_T_TouchScript_Clusters_Cluster.htm" />
-  <HelpKINode Title="Cluster class" Url="html/T_TouchScript_Clusters_Cluster.htm" />
-  <HelpKINode Title="Cluster class">
-    <HelpKINode Title="about Cluster class" Url="html/T_TouchScript_Clusters_Cluster.htm" />
-    <HelpKINode Title="all members" Url="html/AllMembers_T_TouchScript_Clusters_Cluster.htm" />
-    <HelpKINode Title="constructor" Url="html/M_TouchScript_Clusters_Cluster__ctor.htm" />
-    <HelpKINode Title="fields" Url="html/Fields_T_TouchScript_Clusters_Cluster.htm" />
-    <HelpKINode Title="methods" Url="html/Methods_T_TouchScript_Clusters_Cluster.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_TouchScript_Clusters_Cluster.htm" />
-  </HelpKINode>
-  <HelpKINode Title="Cluster.AddPoint method" Url="html/M_TouchScript_Clusters_Cluster_AddPoint.htm" />
-  <HelpKINode Title="Cluster.AddPoints method" Url="html/M_TouchScript_Clusters_Cluster_AddPoints.htm" />
-  <HelpKINode Title="Cluster.Cluster constructor" Url="html/M_TouchScript_Clusters_Cluster__ctor.htm" />
-  <HelpKINode Title="Cluster.dirty property" Url="html/P_TouchScript_Clusters_Cluster_dirty.htm" />
-  <HelpKINode Title="Cluster.Get2DCenterPosition method" Url="html/M_TouchScript_Clusters_Cluster_Get2DCenterPosition.htm" />
-  <HelpKINode Title="Cluster.GetClusterCamera method" Url="html/M_TouchScript_Clusters_Cluster_GetClusterCamera.htm" />
-  <HelpKINode Title="Cluster.getHash method" Url="html/M_TouchScript_Clusters_Cluster_getHash.htm" />
-  <HelpKINode Title="Cluster.GetPrevious2DCenterPosition method" Url="html/M_TouchScript_Clusters_Cluster_GetPrevious2DCenterPosition.htm" />
-  <HelpKINode Title="Cluster.Invalidate method" Url="html/M_TouchScript_Clusters_Cluster_Invalidate.htm" />
-  <HelpKINode Title="Cluster.markClean method" Url="html/M_TouchScript_Clusters_Cluster_markClean.htm" />
-  <HelpKINode Title="Cluster.markDirty method" Url="html/M_TouchScript_Clusters_Cluster_markDirty.htm" />
-  <HelpKINode Title="Cluster.Points field" Url="html/F_TouchScript_Clusters_Cluster_Points.htm" />
-  <HelpKINode Title="Cluster.PointsCount property" Url="html/P_TouchScript_Clusters_Cluster_PointsCount.htm" />
-  <HelpKINode Title="Cluster.RemoveAllPoints method" Url="html/M_TouchScript_Clusters_Cluster_RemoveAllPoints.htm" />
-  <HelpKINode Title="Cluster.RemovePoint method" Url="html/M_TouchScript_Clusters_Cluster_RemovePoint.htm" />
-  <HelpKINode Title="Cluster.RemovePoints method" Url="html/M_TouchScript_Clusters_Cluster_RemovePoints.htm" />
   <HelpKINode Title="CLUSTER1 field" Url="html/F_TouchScript_Clusters_Cluster2_CLUSTER1.htm" />
   <HelpKINode Title="Cluster2 class" Url="html/AllMembers_T_TouchScript_Clusters_Cluster2.htm" />
   <HelpKINode Title="Cluster2 class" Url="html/T_TouchScript_Clusters_Cluster2.htm" />
@@ -91,14 +67,42 @@
   <HelpKINode Title="Cluster2.GetPreviousCenterPosition method" Url="html/M_TouchScript_Clusters_Cluster2_GetPreviousCenterPosition.htm" />
   <HelpKINode Title="Cluster2.HasClusters property" Url="html/P_TouchScript_Clusters_Cluster2_HasClusters.htm" />
   <HelpKINode Title="Cluster2.MinPointsDistance property" Url="html/P_TouchScript_Clusters_Cluster2_MinPointsDistance.htm" />
+  <HelpKINode Title="Clusters class" Url="html/AllMembers_T_TouchScript_Clusters_Clusters.htm" />
+  <HelpKINode Title="Clusters class" Url="html/T_TouchScript_Clusters_Clusters.htm" />
+  <HelpKINode Title="Clusters class">
+    <HelpKINode Title="about Clusters class" Url="html/T_TouchScript_Clusters_Clusters.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers_T_TouchScript_Clusters_Clusters.htm" />
+    <HelpKINode Title="constructor" Url="html/M_TouchScript_Clusters_Clusters__ctor.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_TouchScript_Clusters_Clusters.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_TouchScript_Clusters_Clusters.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_TouchScript_Clusters_Clusters.htm" />
+  </HelpKINode>
   <HelpKINode Title="clusters field" Url="html/F_TouchScript_Gestures_TwoClusterTransform2DGestureBase_clusters.htm" />
+  <HelpKINode Title="Clusters.AddPoint method" Url="html/M_TouchScript_Clusters_Clusters_AddPoint.htm" />
+  <HelpKINode Title="Clusters.AddPoints method" Url="html/M_TouchScript_Clusters_Clusters_AddPoints.htm" />
+  <HelpKINode Title="Clusters.Clusters constructor" Url="html/M_TouchScript_Clusters_Clusters__ctor.htm" />
+  <HelpKINode Title="Clusters.dirty property" Url="html/P_TouchScript_Clusters_Clusters_dirty.htm" />
+  <HelpKINode Title="Clusters.Get2DCenterPosition method" Url="html/M_TouchScript_Clusters_Clusters_Get2DCenterPosition.htm" />
+  <HelpKINode Title="Clusters.GetClusterCamera method" Url="html/M_TouchScript_Clusters_Clusters_GetClusterCamera.htm" />
+  <HelpKINode Title="Clusters.GetPointsHash method" Url="html/M_TouchScript_Clusters_Clusters_GetPointsHash.htm" />
+  <HelpKINode Title="Clusters.GetPrevious2DCenterPosition method" Url="html/M_TouchScript_Clusters_Clusters_GetPrevious2DCenterPosition.htm" />
+  <HelpKINode Title="Clusters.Invalidate method" Url="html/M_TouchScript_Clusters_Clusters_Invalidate.htm" />
+  <HelpKINode Title="Clusters.markClean method" Url="html/M_TouchScript_Clusters_Clusters_markClean.htm" />
+  <HelpKINode Title="Clusters.markDirty method" Url="html/M_TouchScript_Clusters_Clusters_markDirty.htm" />
+  <HelpKINode Title="Clusters.points field" Url="html/F_TouchScript_Clusters_Clusters_points.htm" />
+  <HelpKINode Title="Clusters.PointsCount property" Url="html/P_TouchScript_Clusters_Clusters_PointsCount.htm" />
+  <HelpKINode Title="Clusters.RemoveAllPoints method" Url="html/M_TouchScript_Clusters_Clusters_RemoveAllPoints.htm" />
+  <HelpKINode Title="Clusters.RemovePoint method" Url="html/M_TouchScript_Clusters_Clusters_RemovePoint.htm" />
+  <HelpKINode Title="Clusters.RemovePoints method" Url="html/M_TouchScript_Clusters_Clusters_RemovePoints.htm" />
   <HelpKINode Title="CM_TO_INCH field" Url="html/F_TouchScript_TouchManager_CM_TO_INCH.htm" />
-  <HelpKINode Title="CoordinatesRemapper field" Url="html/F_TouchScript_InputSources_InputSource_CoordinatesRemapper.htm" />
+  <HelpKINode Title="CoordinatesRemapper property" Url="html/P_TouchScript_InputSources_IInputSource_CoordinatesRemapper.htm" />
+  <HelpKINode Title="CoordinatesRemapper property" Url="html/P_TouchScript_InputSources_InputSource_CoordinatesRemapper.htm" />
   <HelpKINode Title="Delegate property" Url="html/P_TouchScript_Gestures_Gesture_Delegate.htm" />
-  <HelpKINode Title="Direction field" Url="html/F_TouchScript_Gestures_FlickGesture_Direction.htm" />
-  <HelpKINode Title="dirty property" Url="html/P_TouchScript_Clusters_Cluster_dirty.htm" />
-  <HelpKINode Title="DistanceLimit field" Url="html/F_TouchScript_Gestures_LongPressGesture_DistanceLimit.htm" />
-  <HelpKINode Title="DistanceLimit field" Url="html/F_TouchScript_Gestures_TapGesture_DistanceLimit.htm" />
+  <HelpKINode Title="Direction property" Url="html/P_TouchScript_Gestures_FlickGesture_Direction.htm" />
+  <HelpKINode Title="dirty property" Url="html/P_TouchScript_Clusters_Clusters_dirty.htm" />
+  <HelpKINode Title="Discard enumeration member" Url="html/T_TouchScript_Hit_HitTest_ObjectHitResult.htm" />
+  <HelpKINode Title="DistanceLimit property" Url="html/P_TouchScript_Gestures_LongPressGesture_DistanceLimit.htm" />
+  <HelpKINode Title="DistanceLimit property" Url="html/P_TouchScript_Gestures_TapGesture_DistanceLimit.htm" />
   <HelpKINode Title="DotsPerCentimeter property" Url="html/P_TouchScript_TouchManager_DotsPerCentimeter.htm" />
   <HelpKINode Title="DPI property" Url="html/P_TouchScript_TouchManager_DPI.htm" />
   <HelpKINode Title="EditorDPI property" Url="html/P_TouchScript_TouchManager_EditorDPI.htm" />
@@ -106,7 +110,8 @@
   <HelpKINode Title="endTouch method" Url="html/M_TouchScript_InputSources_InputSource_endTouch.htm" />
   <HelpKINode Title="endTouch method" Url="html/M_TouchScript_Layers_TouchLayer_endTouch.htm" />
   <HelpKINode Title="EndTouch method" Url="html/M_TouchScript_TouchManager_EndTouch.htm" />
-  <HelpKINode Title="Error enumeration member" Url="html/T_TouchScript_Layers_HitResult.htm" />
+  <HelpKINode Title="Error enumeration member" Url="html/T_TouchScript_Hit_HitTest_ObjectHitResult.htm" />
+  <HelpKINode Title="Error enumeration member" Url="html/T_TouchScript_Layers_TouchLayer_LayerHitResult.htm" />
   <HelpKINode Title="Failed enumeration member" Url="html/T_TouchScript_Gestures_Gesture_GestureState.htm" />
   <HelpKINode Title="FlickGesture class" Url="html/AllMembers_T_TouchScript_Gestures_FlickGesture.htm" />
   <HelpKINode Title="FlickGesture class" Url="html/T_TouchScript_Gestures_FlickGesture.htm" />
@@ -119,19 +124,19 @@
     <HelpKINode Title="methods" Url="html/Methods_T_TouchScript_Gestures_FlickGesture.htm" />
     <HelpKINode Title="properties" Url="html/Properties_T_TouchScript_Gestures_FlickGesture.htm" />
   </HelpKINode>
-  <HelpKINode Title="FlickGesture.Direction field" Url="html/F_TouchScript_Gestures_FlickGesture_Direction.htm" />
+  <HelpKINode Title="FlickGesture.Direction property" Url="html/P_TouchScript_Gestures_FlickGesture_Direction.htm" />
   <HelpKINode Title="FlickGesture.FlickGesture constructor" Url="html/M_TouchScript_Gestures_FlickGesture__ctor.htm" />
-  <HelpKINode Title="FlickGesture.FlickTime field" Url="html/F_TouchScript_Gestures_FlickGesture_FlickTime.htm" />
+  <HelpKINode Title="FlickGesture.FlickTime property" Url="html/P_TouchScript_Gestures_FlickGesture_FlickTime.htm" />
   <HelpKINode Title="FlickGesture.GestureDirection enumeration" Url="html/T_TouchScript_Gestures_FlickGesture_GestureDirection.htm" />
-  <HelpKINode Title="FlickGesture.MinDistance field" Url="html/F_TouchScript_Gestures_FlickGesture_MinDistance.htm" />
-  <HelpKINode Title="FlickGesture.MovementThreshold field" Url="html/F_TouchScript_Gestures_FlickGesture_MovementThreshold.htm" />
+  <HelpKINode Title="FlickGesture.MinDistance property" Url="html/P_TouchScript_Gestures_FlickGesture_MinDistance.htm" />
+  <HelpKINode Title="FlickGesture.MovementThreshold property" Url="html/P_TouchScript_Gestures_FlickGesture_MovementThreshold.htm" />
   <HelpKINode Title="FlickGesture.reset method" Url="html/M_TouchScript_Gestures_FlickGesture_reset.htm" />
   <HelpKINode Title="FlickGesture.ScreenFlickVector property" Url="html/P_TouchScript_Gestures_FlickGesture_ScreenFlickVector.htm" />
   <HelpKINode Title="FlickGesture.touchesBegan method" Url="html/M_TouchScript_Gestures_FlickGesture_touchesBegan.htm" />
   <HelpKINode Title="FlickGesture.touchesCancelled method" Url="html/M_TouchScript_Gestures_FlickGesture_touchesCancelled.htm" />
   <HelpKINode Title="FlickGesture.touchesEnded method" Url="html/M_TouchScript_Gestures_FlickGesture_touchesEnded.htm" />
   <HelpKINode Title="FlickGesture.touchesMoved method" Url="html/M_TouchScript_Gestures_FlickGesture_touchesMoved.htm" />
-  <HelpKINode Title="FlickTime field" Url="html/F_TouchScript_Gestures_FlickGesture_FlickTime.htm" />
+  <HelpKINode Title="FlickTime property" Url="html/P_TouchScript_Gestures_FlickGesture_FlickTime.htm" />
   <HelpKINode Title="FontColor field" Url="html/F_TouchScript_Debugging_TouchDebugger_FontColor.htm" />
   <HelpKINode Title="FullscreenBackgroundTarget class" Url="html/AllMembers_T_TouchScript_Behaviors_FullscreenBackgroundTarget.htm" />
   <HelpKINode Title="FullscreenBackgroundTarget class" Url="html/T_TouchScript_Behaviors_FullscreenBackgroundTarget.htm" />
@@ -165,7 +170,7 @@
   <HelpKINode Title="Gesture.GestureState enumeration" Url="html/T_TouchScript_Gestures_Gesture_GestureState.htm" />
   <HelpKINode Title="Gesture.HasTouchPoint method" Url="html/M_TouchScript_Gestures_Gesture_HasTouchPoint.htm" />
   <HelpKINode Title="Gesture.ignoreTouch method" Url="html/M_TouchScript_Gestures_Gesture_ignoreTouch.htm" />
-  <HelpKINode Title="Gesture.Manager property" Url="html/P_TouchScript_Gestures_Gesture_Manager.htm" />
+  <HelpKINode Title="Gesture.manager property" Url="html/P_TouchScript_Gestures_Gesture_manager.htm" />
   <HelpKINode Title="Gesture.NormalizedScreenPosition property" Url="html/P_TouchScript_Gestures_Gesture_NormalizedScreenPosition.htm" />
   <HelpKINode Title="Gesture.onBegan method" Url="html/M_TouchScript_Gestures_Gesture_onBegan.htm" />
   <HelpKINode Title="Gesture.onCancelled method" Url="html/M_TouchScript_Gestures_Gesture_onCancelled.htm" />
@@ -204,23 +209,23 @@
   <HelpKINode Title="GestureStateChangeEventArgs.GestureStateChangeEventArgs constructor" Url="html/M_TouchScript_Events_GestureStateChangeEventArgs__ctor.htm" />
   <HelpKINode Title="GestureStateChangeEventArgs.PreviousState field" Url="html/F_TouchScript_Events_GestureStateChangeEventArgs_PreviousState.htm" />
   <HelpKINode Title="GestureStateChangeEventArgs.State field" Url="html/F_TouchScript_Events_GestureStateChangeEventArgs_State.htm" />
-  <HelpKINode Title="Get2DCenterPosition method" Url="html/M_TouchScript_Clusters_Cluster_Get2DCenterPosition.htm" />
+  <HelpKINode Title="Get2DCenterPosition method" Url="html/M_TouchScript_Clusters_Clusters_Get2DCenterPosition.htm" />
   <HelpKINode Title="GetCenterPosition method" Url="html/M_TouchScript_Clusters_Cluster2_GetCenterPosition.htm" />
-  <HelpKINode Title="GetClusterCamera method" Url="html/M_TouchScript_Clusters_Cluster_GetClusterCamera.htm" />
-  <HelpKINode Title="getHash method" Url="html/M_TouchScript_Clusters_Cluster_getHash.htm" />
+  <HelpKINode Title="GetClusterCamera method" Url="html/M_TouchScript_Clusters_Clusters_GetClusterCamera.htm" />
   <HelpKINode Title="GetHitTarget method" Url="html/Overload_TouchScript_TouchManager_GetHitTarget.htm" />
-  <HelpKINode Title="GetPrevious2DCenterPosition method" Url="html/M_TouchScript_Clusters_Cluster_GetPrevious2DCenterPosition.htm" />
+  <HelpKINode Title="GetPointsHash method" Url="html/M_TouchScript_Clusters_Clusters_GetPointsHash.htm" />
+  <HelpKINode Title="GetPrevious2DCenterPosition method" Url="html/M_TouchScript_Clusters_Clusters_GetPrevious2DCenterPosition.htm" />
   <HelpKINode Title="GetPreviousCenterPosition method" Url="html/M_TouchScript_Clusters_Cluster2_GetPreviousCenterPosition.htm" />
   <HelpKINode Title="Global enumeration member" Url="html/T_TouchScript_Gestures_Transform2DGestureBase_ProjectionType.htm" />
   <HelpKINode Title="globalToLocalPosition method" Url="html/M_TouchScript_Gestures_Transform2DGestureBase_globalToLocalPosition.htm" />
   <HelpKINode Title="HasClusters property" Url="html/P_TouchScript_Clusters_Cluster2_HasClusters.htm" />
   <HelpKINode Title="HasTouchPoint method" Url="html/M_TouchScript_Gestures_Gesture_HasTouchPoint.htm" />
-  <HelpKINode Title="Hit enumeration member" Url="html/T_TouchScript_Layers_HitResult.htm" />
+  <HelpKINode Title="Hit enumeration member" Url="html/T_TouchScript_Hit_HitTest_ObjectHitResult.htm" />
+  <HelpKINode Title="Hit enumeration member" Url="html/T_TouchScript_Layers_TouchLayer_LayerHitResult.htm" />
   <HelpKINode Title="Hit method" Url="html/M_TouchScript_Layers_CameraLayer_Hit.htm" />
   <HelpKINode Title="Hit method" Url="html/M_TouchScript_Layers_TouchLayer_Hit.htm" />
   <HelpKINode Title="Hit property" Url="html/P_TouchScript_TouchPoint_Hit.htm" />
   <HelpKINode Title="HitCameras property" Url="html/P_TouchScript_TouchManager_HitCameras.htm" />
-  <HelpKINode Title="HitResult enumeration" Url="html/T_TouchScript_Layers_HitResult.htm" />
   <HelpKINode Title="HitTest class" Url="html/AllMembers_T_TouchScript_Hit_HitTest.htm" />
   <HelpKINode Title="HitTest class" Url="html/T_TouchScript_Hit_HitTest.htm" />
   <HelpKINode Title="HitTest class">
@@ -232,6 +237,7 @@
   </HelpKINode>
   <HelpKINode Title="HitTest.HitTest constructor" Url="html/M_TouchScript_Hit_HitTest__ctor.htm" />
   <HelpKINode Title="HitTest.IsHit method" Url="html/M_TouchScript_Hit_HitTest_IsHit.htm" />
+  <HelpKINode Title="HitTest.ObjectHitResult enumeration" Url="html/T_TouchScript_Hit_HitTest_ObjectHitResult.htm" />
   <HelpKINode Title="Horizontal enumeration member" Url="html/T_TouchScript_Gestures_FlickGesture_GestureDirection.htm" />
   <HelpKINode Title="ICoordinatesRemapper interface" Url="html/AllMembers_T_TouchScript_InputSources_ICoordinatesRemapper.htm" />
   <HelpKINode Title="ICoordinatesRemapper interface" Url="html/T_TouchScript_InputSources_ICoordinatesRemapper.htm" />
@@ -253,6 +259,14 @@
   <HelpKINode Title="IGestureDelegate.ShouldReceiveTouch method" Url="html/M_TouchScript_IGestureDelegate_ShouldReceiveTouch.htm" />
   <HelpKINode Title="IGestureDelegate.ShouldRecognizeSimultaneously method" Url="html/M_TouchScript_IGestureDelegate_ShouldRecognizeSimultaneously.htm" />
   <HelpKINode Title="ignoreTouch method" Url="html/M_TouchScript_Gestures_Gesture_ignoreTouch.htm" />
+  <HelpKINode Title="IInputSource interface" Url="html/AllMembers_T_TouchScript_InputSources_IInputSource.htm" />
+  <HelpKINode Title="IInputSource interface" Url="html/T_TouchScript_InputSources_IInputSource.htm" />
+  <HelpKINode Title="IInputSource interface">
+    <HelpKINode Title="about IInputSource interface" Url="html/T_TouchScript_InputSources_IInputSource.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers_T_TouchScript_InputSources_IInputSource.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_TouchScript_InputSources_IInputSource.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IInputSource.CoordinatesRemapper property" Url="html/P_TouchScript_InputSources_IInputSource_CoordinatesRemapper.htm" />
   <HelpKINode Title="INCH_TO_CM field" Url="html/F_TouchScript_TouchManager_INCH_TO_CM.htm" />
   <HelpKINode Title="InputSource class" Url="html/AllMembers_T_TouchScript_InputSources_InputSource.htm" />
   <HelpKINode Title="InputSource class" Url="html/T_TouchScript_InputSources_InputSource.htm" />
@@ -266,18 +280,19 @@
   </HelpKINode>
   <HelpKINode Title="InputSource.beginTouch method" Url="html/M_TouchScript_InputSources_InputSource_beginTouch.htm" />
   <HelpKINode Title="InputSource.cancelTouch method" Url="html/M_TouchScript_InputSources_InputSource_cancelTouch.htm" />
-  <HelpKINode Title="InputSource.CoordinatesRemapper field" Url="html/F_TouchScript_InputSources_InputSource_CoordinatesRemapper.htm" />
+  <HelpKINode Title="InputSource.CoordinatesRemapper property" Url="html/P_TouchScript_InputSources_InputSource_CoordinatesRemapper.htm" />
   <HelpKINode Title="InputSource.endTouch method" Url="html/M_TouchScript_InputSources_InputSource_endTouch.htm" />
   <HelpKINode Title="InputSource.InputSource constructor" Url="html/M_TouchScript_InputSources_InputSource__ctor.htm" />
-  <HelpKINode Title="InputSource.Manager field" Url="html/F_TouchScript_InputSources_InputSource_Manager.htm" />
+  <HelpKINode Title="InputSource.manager field" Url="html/F_TouchScript_InputSources_InputSource_manager.htm" />
   <HelpKINode Title="InputSource.moveTouch method" Url="html/M_TouchScript_InputSources_InputSource_moveTouch.htm" />
   <HelpKINode Title="InputSource.OnDestroy method" Url="html/M_TouchScript_InputSources_InputSource_OnDestroy.htm" />
   <HelpKINode Title="InputSource.Start method" Url="html/M_TouchScript_InputSources_InputSource_Start.htm" />
   <HelpKINode Title="InputSource.Update method" Url="html/M_TouchScript_InputSources_InputSource_Update.htm" />
   <HelpKINode Title="Instance property" Url="html/P_TouchScript_TouchManager_Instance.htm" />
-  <HelpKINode Title="Invalidate method" Url="html/M_TouchScript_Clusters_Cluster_Invalidate.htm" />
+  <HelpKINode Title="Invalidate method" Url="html/M_TouchScript_Clusters_Clusters_Invalidate.htm" />
   <HelpKINode Title="IsHit method" Url="html/M_TouchScript_Hit_HitTest_IsHit.htm" />
   <HelpKINode Title="Layer property" Url="html/P_TouchScript_TouchPoint_Layer.htm" />
+  <HelpKINode Title="LayerMask property" Url="html/P_TouchScript_Layers_CameraLayer_LayerMask.htm" />
   <HelpKINode Title="Layers property" Url="html/P_TouchScript_TouchManager_Layers.htm" />
   <HelpKINode Title="LiveDPI property" Url="html/P_TouchScript_TouchManager_LiveDPI.htm" />
   <HelpKINode Title="Local enumeration member" Url="html/T_TouchScript_Gestures_Transform2DGestureBase_ProjectionType.htm" />
@@ -297,21 +312,21 @@
     <HelpKINode Title="properties" Url="html/Properties_T_TouchScript_Gestures_LongPressGesture.htm" />
   </HelpKINode>
   <HelpKINode Title="LongPressGesture.Awake method" Url="html/M_TouchScript_Gestures_LongPressGesture_Awake.htm" />
-  <HelpKINode Title="LongPressGesture.DistanceLimit field" Url="html/F_TouchScript_Gestures_LongPressGesture_DistanceLimit.htm" />
+  <HelpKINode Title="LongPressGesture.DistanceLimit property" Url="html/P_TouchScript_Gestures_LongPressGesture_DistanceLimit.htm" />
   <HelpKINode Title="LongPressGesture.LongPressGesture constructor" Url="html/M_TouchScript_Gestures_LongPressGesture__ctor.htm" />
-  <HelpKINode Title="LongPressGesture.MaxTouches field" Url="html/F_TouchScript_Gestures_LongPressGesture_MaxTouches.htm" />
+  <HelpKINode Title="LongPressGesture.MaxTouches property" Url="html/P_TouchScript_Gestures_LongPressGesture_MaxTouches.htm" />
   <HelpKINode Title="LongPressGesture.onFailed method" Url="html/M_TouchScript_Gestures_LongPressGesture_onFailed.htm" />
   <HelpKINode Title="LongPressGesture.reset method" Url="html/M_TouchScript_Gestures_LongPressGesture_reset.htm" />
-  <HelpKINode Title="LongPressGesture.TimeToPress field" Url="html/F_TouchScript_Gestures_LongPressGesture_TimeToPress.htm" />
+  <HelpKINode Title="LongPressGesture.TimeToPress property" Url="html/P_TouchScript_Gestures_LongPressGesture_TimeToPress.htm" />
   <HelpKINode Title="LongPressGesture.touchesBegan method" Url="html/M_TouchScript_Gestures_LongPressGesture_touchesBegan.htm" />
   <HelpKINode Title="LongPressGesture.touchesEnded method" Url="html/M_TouchScript_Gestures_LongPressGesture_touchesEnded.htm" />
   <HelpKINode Title="LongPressGesture.touchesMoved method" Url="html/M_TouchScript_Gestures_LongPressGesture_touchesMoved.htm" />
   <HelpKINode Title="LongPressGesture.Update method" Url="html/M_TouchScript_Gestures_LongPressGesture_Update.htm" />
-  <HelpKINode Title="Manager field" Url="html/F_TouchScript_InputSources_InputSource_Manager.htm" />
-  <HelpKINode Title="Manager property" Url="html/P_TouchScript_Gestures_Gesture_Manager.htm" />
-  <HelpKINode Title="markClean method" Url="html/M_TouchScript_Clusters_Cluster_markClean.htm" />
-  <HelpKINode Title="markDirty method" Url="html/M_TouchScript_Clusters_Cluster_markDirty.htm" />
-  <HelpKINode Title="MaxTouches field" Url="html/F_TouchScript_Gestures_LongPressGesture_MaxTouches.htm" />
+  <HelpKINode Title="manager field" Url="html/F_TouchScript_InputSources_InputSource_manager.htm" />
+  <HelpKINode Title="manager property" Url="html/P_TouchScript_Gestures_Gesture_manager.htm" />
+  <HelpKINode Title="markClean method" Url="html/M_TouchScript_Clusters_Clusters_markClean.htm" />
+  <HelpKINode Title="markDirty method" Url="html/M_TouchScript_Clusters_Clusters_markDirty.htm" />
+  <HelpKINode Title="MaxTouches property" Url="html/P_TouchScript_Gestures_LongPressGesture_MaxTouches.htm" />
   <HelpKINode Title="MetaGesture class" Url="html/AllMembers_T_TouchScript_Gestures_MetaGesture.htm" />
   <HelpKINode Title="MetaGesture class" Url="html/T_TouchScript_Gestures_MetaGesture.htm" />
   <HelpKINode Title="MetaGesture class">
@@ -328,10 +343,10 @@
   <HelpKINode Title="MetaGesture.touchesCancelled method" Url="html/M_TouchScript_Gestures_MetaGesture_touchesCancelled.htm" />
   <HelpKINode Title="MetaGesture.touchesEnded method" Url="html/M_TouchScript_Gestures_MetaGesture_touchesEnded.htm" />
   <HelpKINode Title="MetaGesture.touchesMoved method" Url="html/M_TouchScript_Gestures_MetaGesture_touchesMoved.htm" />
-  <HelpKINode Title="MetaGesture.TouchPointAdded event" Url="html/E_TouchScript_Gestures_MetaGesture_TouchPointAdded.htm" />
+  <HelpKINode Title="MetaGesture.TouchPointBegan event" Url="html/E_TouchScript_Gestures_MetaGesture_TouchPointBegan.htm" />
   <HelpKINode Title="MetaGesture.TouchPointCancelled event" Url="html/E_TouchScript_Gestures_MetaGesture_TouchPointCancelled.htm" />
-  <HelpKINode Title="MetaGesture.TouchPointRemoved event" Url="html/E_TouchScript_Gestures_MetaGesture_TouchPointRemoved.htm" />
-  <HelpKINode Title="MetaGesture.TouchPointUpdated event" Url="html/E_TouchScript_Gestures_MetaGesture_TouchPointUpdated.htm" />
+  <HelpKINode Title="MetaGesture.TouchPointEnded event" Url="html/E_TouchScript_Gestures_MetaGesture_TouchPointEnded.htm" />
+  <HelpKINode Title="MetaGesture.TouchPointMoved event" Url="html/E_TouchScript_Gestures_MetaGesture_TouchPointMoved.htm" />
   <HelpKINode Title="MetaGestureEventArgs class" Url="html/AllMembers_T_TouchScript_Gestures_MetaGestureEventArgs.htm" />
   <HelpKINode Title="MetaGestureEventArgs class" Url="html/T_TouchScript_Gestures_MetaGestureEventArgs.htm" />
   <HelpKINode Title="MetaGestureEventArgs class">
@@ -344,9 +359,22 @@
   <HelpKINode Title="MetaGestureEventArgs.MetaGestureEventArgs constructor" Url="html/M_TouchScript_Gestures_MetaGestureEventArgs__ctor.htm" />
   <HelpKINode Title="MetaGestureEventArgs.TouchPoint field" Url="html/F_TouchScript_Gestures_MetaGestureEventArgs_TouchPoint.htm" />
   <HelpKINode Title="MinClusterDistance property" Url="html/P_TouchScript_Gestures_TwoClusterTransform2DGestureBase_MinClusterDistance.htm" />
-  <HelpKINode Title="MinDistance field" Url="html/F_TouchScript_Gestures_FlickGesture_MinDistance.htm" />
+  <HelpKINode Title="MinDistance property" Url="html/P_TouchScript_Gestures_FlickGesture_MinDistance.htm" />
   <HelpKINode Title="MinPointsDistance property" Url="html/P_TouchScript_Clusters_Cluster2_MinPointsDistance.htm" />
-  <HelpKINode Title="Miss enumeration member" Url="html/T_TouchScript_Layers_HitResult.htm" />
+  <HelpKINode Title="Miss enumeration member" Url="html/T_TouchScript_Hit_HitTest_ObjectHitResult.htm" />
+  <HelpKINode Title="Miss enumeration member" Url="html/T_TouchScript_Layers_TouchLayer_LayerHitResult.htm" />
+  <HelpKINode Title="MobileInput class" Url="html/AllMembers_T_TouchScript_InputSources_MobileInput.htm" />
+  <HelpKINode Title="MobileInput class" Url="html/T_TouchScript_InputSources_MobileInput.htm" />
+  <HelpKINode Title="MobileInput class">
+    <HelpKINode Title="about MobileInput class" Url="html/T_TouchScript_InputSources_MobileInput.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers_T_TouchScript_InputSources_MobileInput.htm" />
+    <HelpKINode Title="constructor" Url="html/M_TouchScript_InputSources_MobileInput__ctor.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_TouchScript_InputSources_MobileInput.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_TouchScript_InputSources_MobileInput.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_TouchScript_InputSources_MobileInput.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MobileInput.MobileInput constructor" Url="html/M_TouchScript_InputSources_MobileInput__ctor.htm" />
+  <HelpKINode Title="MobileInput.Update method" Url="html/M_TouchScript_InputSources_MobileInput_Update.htm" />
   <HelpKINode Title="MouseInput class" Url="html/AllMembers_T_TouchScript_InputSources_MouseInput.htm" />
   <HelpKINode Title="MouseInput class" Url="html/T_TouchScript_InputSources_MouseInput.htm" />
   <HelpKINode Title="MouseInput class">
@@ -358,13 +386,13 @@
     <HelpKINode Title="properties" Url="html/Properties_T_TouchScript_InputSources_MouseInput.htm" />
   </HelpKINode>
   <HelpKINode Title="MouseInput.MouseInput constructor" Url="html/M_TouchScript_InputSources_MouseInput__ctor.htm" />
+  <HelpKINode Title="MouseInput.Start method" Url="html/M_TouchScript_InputSources_MouseInput_Start.htm" />
   <HelpKINode Title="MouseInput.Update method" Url="html/M_TouchScript_InputSources_MouseInput_Update.htm" />
-  <HelpKINode Title="MovementThreshold field" Url="html/F_TouchScript_Gestures_FlickGesture_MovementThreshold.htm" />
-  <HelpKINode Title="MovementThreshold field" Url="html/F_TouchScript_InputSources_TuioInput_MovementThreshold.htm" />
+  <HelpKINode Title="MovementThreshold property" Url="html/P_TouchScript_Gestures_FlickGesture_MovementThreshold.htm" />
   <HelpKINode Title="MovementThreshold property" Url="html/P_TouchScript_Gestures_PanGesture_MovementThreshold.htm" />
-  <HelpKINode Title="MoveTouch method" Url="html/M_TouchScript_TouchManager_MoveTouch.htm" />
   <HelpKINode Title="moveTouch method" Url="html/M_TouchScript_InputSources_InputSource_moveTouch.htm" />
   <HelpKINode Title="moveTouch method" Url="html/M_TouchScript_Layers_TouchLayer_moveTouch.htm" />
+  <HelpKINode Title="MoveTouch method" Url="html/M_TouchScript_TouchManager_MoveTouch.htm" />
   <HelpKINode Title="Name field" Url="html/F_TouchScript_Layers_TouchLayer_Name.htm" />
   <HelpKINode Title="NormalizedScreenPosition property" Url="html/P_TouchScript_Gestures_Gesture_NormalizedScreenPosition.htm" />
   <HelpKINode Title="onBegan method" Url="html/M_TouchScript_Gestures_Gesture_onBegan.htm" />
@@ -372,7 +400,6 @@
   <HelpKINode Title="onChanged method" Url="html/M_TouchScript_Gestures_Gesture_onChanged.htm" />
   <HelpKINode Title="OnDestroy method" Url="html/M_TouchScript_Gestures_Gesture_OnDestroy.htm" />
   <HelpKINode Title="OnDestroy method" Url="html/M_TouchScript_InputSources_InputSource_OnDestroy.htm" />
-  <HelpKINode Title="OnDestroy method" Url="html/M_TouchScript_InputSources_TuioInput_OnDestroy.htm" />
   <HelpKINode Title="OnDestroy method" Url="html/M_TouchScript_InputSources_Win7TouchInput_OnDestroy.htm" />
   <HelpKINode Title="OnDestroy method" Url="html/M_TouchScript_Layers_TouchLayer_OnDestroy.htm" />
   <HelpKINode Title="OnDisable method" Url="html/M_TouchScript_Gestures_Gesture_OnDisable.htm" />
@@ -398,8 +425,8 @@
   <HelpKINode Title="PanGesture.touchesMoved method" Url="html/M_TouchScript_Gestures_PanGesture_touchesMoved.htm" />
   <HelpKINode Title="PanGesture.WorldDeltaPosition property" Url="html/P_TouchScript_Gestures_PanGesture_WorldDeltaPosition.htm" />
   <HelpKINode Title="PixelTouchRadius property" Url="html/P_TouchScript_TouchManager_PixelTouchRadius.htm" />
-  <HelpKINode Title="Points field" Url="html/F_TouchScript_Clusters_Cluster_Points.htm" />
-  <HelpKINode Title="PointsCount property" Url="html/P_TouchScript_Clusters_Cluster_PointsCount.htm" />
+  <HelpKINode Title="points field" Url="html/F_TouchScript_Clusters_Clusters_points.htm" />
+  <HelpKINode Title="PointsCount property" Url="html/P_TouchScript_Clusters_Clusters_PointsCount.htm" />
   <HelpKINode Title="Position property" Url="html/P_TouchScript_TouchPoint_Position.htm" />
   <HelpKINode Title="Possible enumeration member" Url="html/T_TouchScript_Gestures_Gesture_GestureState.htm" />
   <HelpKINode Title="PressGesture class" Url="html/AllMembers_T_TouchScript_Gestures_PressGesture.htm" />
@@ -456,10 +483,10 @@
   <HelpKINode Title="ReleaseGesture.ReleaseGesture constructor" Url="html/M_TouchScript_Gestures_ReleaseGesture__ctor.htm" />
   <HelpKINode Title="ReleaseGesture.touchesEnded method" Url="html/M_TouchScript_Gestures_ReleaseGesture_touchesEnded.htm" />
   <HelpKINode Title="Remap method" Url="html/M_TouchScript_InputSources_ICoordinatesRemapper_Remap.htm" />
-  <HelpKINode Title="RemoveAllPoints method" Url="html/M_TouchScript_Clusters_Cluster_RemoveAllPoints.htm" />
+  <HelpKINode Title="RemoveAllPoints method" Url="html/M_TouchScript_Clusters_Clusters_RemoveAllPoints.htm" />
   <HelpKINode Title="RemoveLayer method" Url="html/M_TouchScript_TouchManager_RemoveLayer.htm" />
-  <HelpKINode Title="RemovePoint method" Url="html/M_TouchScript_Clusters_Cluster_RemovePoint.htm" />
-  <HelpKINode Title="RemovePoints method" Url="html/M_TouchScript_Clusters_Cluster_RemovePoints.htm" />
+  <HelpKINode Title="RemovePoint method" Url="html/M_TouchScript_Clusters_Clusters_RemovePoint.htm" />
+  <HelpKINode Title="RemovePoints method" Url="html/M_TouchScript_Clusters_Clusters_RemovePoints.htm" />
   <HelpKINode Title="reset method" Url="html/M_TouchScript_Gestures_FlickGesture_reset.htm" />
   <HelpKINode Title="reset method" Url="html/M_TouchScript_Gestures_Gesture_reset.htm" />
   <HelpKINode Title="reset method" Url="html/M_TouchScript_Gestures_LongPressGesture_reset.htm" />
@@ -507,6 +534,7 @@
   <HelpKINode Title="screenPosition field" Url="html/F_TouchScript_Gestures_TwoClusterTransform2DGestureBase_screenPosition.htm" />
   <HelpKINode Title="ScreenPosition property" Url="html/P_TouchScript_Gestures_Gesture_ScreenPosition.htm" />
   <HelpKINode Title="ScreenPosition property" Url="html/P_TouchScript_Gestures_TwoClusterTransform2DGestureBase_ScreenPosition.htm" />
+  <HelpKINode Title="setName method" Url="html/M_TouchScript_Layers_CameraLayer_setName.htm" />
   <HelpKINode Title="setName method" Url="html/M_TouchScript_Layers_TouchLayer_setName.htm" />
   <HelpKINode Title="setState method" Url="html/M_TouchScript_Gestures_Gesture_setState.htm" />
   <HelpKINode Title="ShouldBegin method" Url="html/M_TouchScript_Gestures_Gesture_ShouldBegin.htm" />
@@ -518,7 +546,7 @@
   <HelpKINode Title="Speed field" Url="html/F_TouchScript_Behaviors_Transformer2D_Speed.htm" />
   <HelpKINode Title="Start method" Url="html/M_TouchScript_Gestures_Gesture_Start.htm" />
   <HelpKINode Title="Start method" Url="html/M_TouchScript_InputSources_InputSource_Start.htm" />
-  <HelpKINode Title="Start method" Url="html/M_TouchScript_InputSources_TuioInput_Start.htm" />
+  <HelpKINode Title="Start method" Url="html/M_TouchScript_InputSources_MouseInput_Start.htm" />
   <HelpKINode Title="Start method" Url="html/M_TouchScript_InputSources_Win7TouchInput_Start.htm" />
   <HelpKINode Title="State field" Url="html/F_TouchScript_Events_GestureStateChangeEventArgs_State.htm" />
   <HelpKINode Title="State property" Url="html/P_TouchScript_Gestures_Gesture_State.htm" />
@@ -534,17 +562,17 @@
     <HelpKINode Title="methods" Url="html/Methods_T_TouchScript_Gestures_TapGesture.htm" />
     <HelpKINode Title="properties" Url="html/Properties_T_TouchScript_Gestures_TapGesture.htm" />
   </HelpKINode>
-  <HelpKINode Title="TapGesture.DistanceLimit field" Url="html/F_TouchScript_Gestures_TapGesture_DistanceLimit.htm" />
+  <HelpKINode Title="TapGesture.DistanceLimit property" Url="html/P_TouchScript_Gestures_TapGesture_DistanceLimit.htm" />
   <HelpKINode Title="TapGesture.reset method" Url="html/M_TouchScript_Gestures_TapGesture_reset.htm" />
   <HelpKINode Title="TapGesture.TapGesture constructor" Url="html/M_TouchScript_Gestures_TapGesture__ctor.htm" />
-  <HelpKINode Title="TapGesture.TimeLimit field" Url="html/F_TouchScript_Gestures_TapGesture_TimeLimit.htm" />
+  <HelpKINode Title="TapGesture.TimeLimit property" Url="html/P_TouchScript_Gestures_TapGesture_TimeLimit.htm" />
   <HelpKINode Title="TapGesture.touchesBegan method" Url="html/M_TouchScript_Gestures_TapGesture_touchesBegan.htm" />
   <HelpKINode Title="TapGesture.touchesCancelled method" Url="html/M_TouchScript_Gestures_TapGesture_touchesCancelled.htm" />
   <HelpKINode Title="TapGesture.touchesEnded method" Url="html/M_TouchScript_Gestures_TapGesture_touchesEnded.htm" />
   <HelpKINode Title="TapGesture.touchesMoved method" Url="html/M_TouchScript_Gestures_TapGesture_touchesMoved.htm" />
   <HelpKINode Title="Target property" Url="html/P_TouchScript_TouchPoint_Target.htm" />
-  <HelpKINode Title="TimeLimit field" Url="html/F_TouchScript_Gestures_TapGesture_TimeLimit.htm" />
-  <HelpKINode Title="TimeToPress field" Url="html/F_TouchScript_Gestures_LongPressGesture_TimeToPress.htm" />
+  <HelpKINode Title="TimeLimit property" Url="html/P_TouchScript_Gestures_TapGesture_TimeLimit.htm" />
+  <HelpKINode Title="TimeToPress property" Url="html/P_TouchScript_Gestures_LongPressGesture_TimeToPress.htm" />
   <HelpKINode Title="TouchDebugger class" Url="html/AllMembers_T_TouchScript_Debugging_TouchDebugger.htm" />
   <HelpKINode Title="TouchDebugger class" Url="html/T_TouchScript_Debugging_TouchDebugger.htm" />
   <HelpKINode Title="TouchDebugger class">
@@ -622,6 +650,7 @@
   <HelpKINode Title="TouchLayer.cancelTouch method" Url="html/M_TouchScript_Layers_TouchLayer_cancelTouch.htm" />
   <HelpKINode Title="TouchLayer.endTouch method" Url="html/M_TouchScript_Layers_TouchLayer_endTouch.htm" />
   <HelpKINode Title="TouchLayer.Hit method" Url="html/M_TouchScript_Layers_TouchLayer_Hit.htm" />
+  <HelpKINode Title="TouchLayer.LayerHitResult enumeration" Url="html/T_TouchScript_Layers_TouchLayer_LayerHitResult.htm" />
   <HelpKINode Title="TouchLayer.moveTouch method" Url="html/M_TouchScript_Layers_TouchLayer_moveTouch.htm" />
   <HelpKINode Title="TouchLayer.Name field" Url="html/F_TouchScript_Layers_TouchLayer_Name.htm" />
   <HelpKINode Title="TouchLayer.OnDestroy method" Url="html/M_TouchScript_Layers_TouchLayer_OnDestroy.htm" />
@@ -681,11 +710,11 @@
   <HelpKINode Title="TouchPoint.PreviousPosition property" Url="html/P_TouchScript_TouchPoint_PreviousPosition.htm" />
   <HelpKINode Title="TouchPoint.Target property" Url="html/P_TouchScript_TouchPoint_Target.htm" />
   <HelpKINode Title="TouchPoint.TouchPoint constructor" Url="html/M_TouchScript_TouchPoint__ctor.htm" />
-  <HelpKINode Title="TouchPointAdded event" Url="html/E_TouchScript_Gestures_MetaGesture_TouchPointAdded.htm" />
+  <HelpKINode Title="TouchPointBegan event" Url="html/E_TouchScript_Gestures_MetaGesture_TouchPointBegan.htm" />
   <HelpKINode Title="TouchPointCancelled event" Url="html/E_TouchScript_Gestures_MetaGesture_TouchPointCancelled.htm" />
-  <HelpKINode Title="TouchPointRemoved event" Url="html/E_TouchScript_Gestures_MetaGesture_TouchPointRemoved.htm" />
+  <HelpKINode Title="TouchPointEnded event" Url="html/E_TouchScript_Gestures_MetaGesture_TouchPointEnded.htm" />
+  <HelpKINode Title="TouchPointMoved event" Url="html/E_TouchScript_Gestures_MetaGesture_TouchPointMoved.htm" />
   <HelpKINode Title="TouchPoints field" Url="html/F_TouchScript_Events_TouchEventArgs_TouchPoints.htm" />
-  <HelpKINode Title="TouchPointUpdated event" Url="html/E_TouchScript_Gestures_MetaGesture_TouchPointUpdated.htm" />
   <HelpKINode Title="TouchRadius property" Url="html/P_TouchScript_TouchManager_TouchRadius.htm" />
   <HelpKINode Title="TouchScript namespace" Url="html/N_TouchScript.htm" />
   <HelpKINode Title="TouchScript.Behaviors namespace" Url="html/N_TouchScript_Behaviors.htm" />
@@ -694,10 +723,10 @@
   <HelpKINode Title="TouchScript.Behaviors.Transformer2D class" Url="html/AllMembers_T_TouchScript_Behaviors_Transformer2D.htm" />
   <HelpKINode Title="TouchScript.Behaviors.Transformer2D class" Url="html/T_TouchScript_Behaviors_Transformer2D.htm" />
   <HelpKINode Title="TouchScript.Clusters namespace" Url="html/N_TouchScript_Clusters.htm" />
-  <HelpKINode Title="TouchScript.Clusters.Cluster class" Url="html/AllMembers_T_TouchScript_Clusters_Cluster.htm" />
-  <HelpKINode Title="TouchScript.Clusters.Cluster class" Url="html/T_TouchScript_Clusters_Cluster.htm" />
   <HelpKINode Title="TouchScript.Clusters.Cluster2 class" Url="html/AllMembers_T_TouchScript_Clusters_Cluster2.htm" />
   <HelpKINode Title="TouchScript.Clusters.Cluster2 class" Url="html/T_TouchScript_Clusters_Cluster2.htm" />
+  <HelpKINode Title="TouchScript.Clusters.Clusters class" Url="html/AllMembers_T_TouchScript_Clusters_Clusters.htm" />
+  <HelpKINode Title="TouchScript.Clusters.Clusters class" Url="html/T_TouchScript_Clusters_Clusters.htm" />
   <HelpKINode Title="TouchScript.Debugging namespace" Url="html/N_TouchScript_Debugging.htm" />
   <HelpKINode Title="TouchScript.Debugging.TouchDebugger class" Url="html/AllMembers_T_TouchScript_Debugging_TouchDebugger.htm" />
   <HelpKINode Title="TouchScript.Debugging.TouchDebugger class" Url="html/T_TouchScript_Debugging_TouchDebugger.htm" />
@@ -739,25 +768,28 @@
   <HelpKINode Title="TouchScript.Hit namespace" Url="html/N_TouchScript_Hit.htm" />
   <HelpKINode Title="TouchScript.Hit.HitTest class" Url="html/AllMembers_T_TouchScript_Hit_HitTest.htm" />
   <HelpKINode Title="TouchScript.Hit.HitTest class" Url="html/T_TouchScript_Hit_HitTest.htm" />
+  <HelpKINode Title="TouchScript.Hit.HitTest.ObjectHitResult enumeration" Url="html/T_TouchScript_Hit_HitTest_ObjectHitResult.htm" />
   <HelpKINode Title="TouchScript.IGestureDelegate interface" Url="html/AllMembers_T_TouchScript_IGestureDelegate.htm" />
   <HelpKINode Title="TouchScript.IGestureDelegate interface" Url="html/T_TouchScript_IGestureDelegate.htm" />
   <HelpKINode Title="TouchScript.InputSources namespace" Url="html/N_TouchScript_InputSources.htm" />
   <HelpKINode Title="TouchScript.InputSources.ICoordinatesRemapper interface" Url="html/AllMembers_T_TouchScript_InputSources_ICoordinatesRemapper.htm" />
   <HelpKINode Title="TouchScript.InputSources.ICoordinatesRemapper interface" Url="html/T_TouchScript_InputSources_ICoordinatesRemapper.htm" />
+  <HelpKINode Title="TouchScript.InputSources.IInputSource interface" Url="html/AllMembers_T_TouchScript_InputSources_IInputSource.htm" />
+  <HelpKINode Title="TouchScript.InputSources.IInputSource interface" Url="html/T_TouchScript_InputSources_IInputSource.htm" />
   <HelpKINode Title="TouchScript.InputSources.InputSource class" Url="html/AllMembers_T_TouchScript_InputSources_InputSource.htm" />
   <HelpKINode Title="TouchScript.InputSources.InputSource class" Url="html/T_TouchScript_InputSources_InputSource.htm" />
+  <HelpKINode Title="TouchScript.InputSources.MobileInput class" Url="html/AllMembers_T_TouchScript_InputSources_MobileInput.htm" />
+  <HelpKINode Title="TouchScript.InputSources.MobileInput class" Url="html/T_TouchScript_InputSources_MobileInput.htm" />
   <HelpKINode Title="TouchScript.InputSources.MouseInput class" Url="html/AllMembers_T_TouchScript_InputSources_MouseInput.htm" />
   <HelpKINode Title="TouchScript.InputSources.MouseInput class" Url="html/T_TouchScript_InputSources_MouseInput.htm" />
-  <HelpKINode Title="TouchScript.InputSources.TuioInput class" Url="html/AllMembers_T_TouchScript_InputSources_TuioInput.htm" />
-  <HelpKINode Title="TouchScript.InputSources.TuioInput class" Url="html/T_TouchScript_InputSources_TuioInput.htm" />
   <HelpKINode Title="TouchScript.InputSources.Win7TouchInput class" Url="html/AllMembers_T_TouchScript_InputSources_Win7TouchInput.htm" />
   <HelpKINode Title="TouchScript.InputSources.Win7TouchInput class" Url="html/T_TouchScript_InputSources_Win7TouchInput.htm" />
   <HelpKINode Title="TouchScript.Layers namespace" Url="html/N_TouchScript_Layers.htm" />
   <HelpKINode Title="TouchScript.Layers.CameraLayer class" Url="html/AllMembers_T_TouchScript_Layers_CameraLayer.htm" />
   <HelpKINode Title="TouchScript.Layers.CameraLayer class" Url="html/T_TouchScript_Layers_CameraLayer.htm" />
-  <HelpKINode Title="TouchScript.Layers.HitResult enumeration" Url="html/T_TouchScript_Layers_HitResult.htm" />
   <HelpKINode Title="TouchScript.Layers.TouchLayer class" Url="html/AllMembers_T_TouchScript_Layers_TouchLayer.htm" />
   <HelpKINode Title="TouchScript.Layers.TouchLayer class" Url="html/T_TouchScript_Layers_TouchLayer.htm" />
+  <HelpKINode Title="TouchScript.Layers.TouchLayer.LayerHitResult enumeration" Url="html/T_TouchScript_Layers_TouchLayer_LayerHitResult.htm" />
   <HelpKINode Title="TouchScript.TouchManager class" Url="html/AllMembers_T_TouchScript_TouchManager.htm" />
   <HelpKINode Title="TouchScript.TouchManager class" Url="html/T_TouchScript_TouchManager.htm" />
   <HelpKINode Title="TouchScript.TouchPoint class" Url="html/AllMembers_T_TouchScript_TouchPoint.htm" />
@@ -808,23 +840,6 @@
   </HelpKINode>
   <HelpKINode Title="Transformer2D.Speed field" Url="html/F_TouchScript_Behaviors_Transformer2D_Speed.htm" />
   <HelpKINode Title="Transformer2D.Transformer2D constructor" Url="html/M_TouchScript_Behaviors_Transformer2D__ctor.htm" />
-  <HelpKINode Title="TuioInput class" Url="html/AllMembers_T_TouchScript_InputSources_TuioInput.htm" />
-  <HelpKINode Title="TuioInput class" Url="html/T_TouchScript_InputSources_TuioInput.htm" />
-  <HelpKINode Title="TuioInput class">
-    <HelpKINode Title="about TuioInput class" Url="html/T_TouchScript_InputSources_TuioInput.htm" />
-    <HelpKINode Title="all members" Url="html/AllMembers_T_TouchScript_InputSources_TuioInput.htm" />
-    <HelpKINode Title="constructor" Url="html/M_TouchScript_InputSources_TuioInput__ctor.htm" />
-    <HelpKINode Title="fields" Url="html/Fields_T_TouchScript_InputSources_TuioInput.htm" />
-    <HelpKINode Title="methods" Url="html/Methods_T_TouchScript_InputSources_TuioInput.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_TouchScript_InputSources_TuioInput.htm" />
-  </HelpKINode>
-  <HelpKINode Title="TuioInput.MovementThreshold field" Url="html/F_TouchScript_InputSources_TuioInput_MovementThreshold.htm" />
-  <HelpKINode Title="TuioInput.OnDestroy method" Url="html/M_TouchScript_InputSources_TuioInput_OnDestroy.htm" />
-  <HelpKINode Title="TuioInput.Start method" Url="html/M_TouchScript_InputSources_TuioInput_Start.htm" />
-  <HelpKINode Title="TuioInput.TuioInput constructor" Url="html/M_TouchScript_InputSources_TuioInput__ctor.htm" />
-  <HelpKINode Title="TuioInput.TuioPort field" Url="html/F_TouchScript_InputSources_TuioInput_TuioPort.htm" />
-  <HelpKINode Title="TuioInput.Update method" Url="html/M_TouchScript_InputSources_TuioInput_Update.htm" />
-  <HelpKINode Title="TuioPort field" Url="html/F_TouchScript_InputSources_TuioInput_TuioPort.htm" />
   <HelpKINode Title="TwoClusterTransform2DGestureBase class" Url="html/AllMembers_T_TouchScript_Gestures_TwoClusterTransform2DGestureBase.htm" />
   <HelpKINode Title="TwoClusterTransform2DGestureBase class" Url="html/T_TouchScript_Gestures_TwoClusterTransform2DGestureBase.htm" />
   <HelpKINode Title="TwoClusterTransform2DGestureBase class">
@@ -850,8 +865,8 @@
   <HelpKINode Title="Update method" Url="html/M_TouchScript_Behaviors_FullscreenBackgroundTarget_Update.htm" />
   <HelpKINode Title="Update method" Url="html/M_TouchScript_Gestures_LongPressGesture_Update.htm" />
   <HelpKINode Title="Update method" Url="html/M_TouchScript_InputSources_InputSource_Update.htm" />
+  <HelpKINode Title="Update method" Url="html/M_TouchScript_InputSources_MobileInput_Update.htm" />
   <HelpKINode Title="Update method" Url="html/M_TouchScript_InputSources_MouseInput_Update.htm" />
-  <HelpKINode Title="Update method" Url="html/M_TouchScript_InputSources_TuioInput_Update.htm" />
   <HelpKINode Title="updateProjectionCamera method" Url="html/M_TouchScript_Gestures_Transform2DGestureBase_updateProjectionCamera.htm" />
   <HelpKINode Title="updateProjectionPlane method" Url="html/M_TouchScript_Gestures_Transform2DGestureBase_updateProjectionPlane.htm" />
   <HelpKINode Title="Vertical enumeration member" Url="html/T_TouchScript_Gestures_FlickGesture_GestureDirection.htm" />
