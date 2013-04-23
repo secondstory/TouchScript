@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 
 <html lang="en">
     <head>
@@ -218,6 +218,7 @@
                         <p><ul>
                             <li><strong>Why TUIO/Windows 7 touch/iOS touch doesn't work?</strong><br/>You most likely haven't added an appropriate touch source. To recieve TUIO messages add somewhere in the scene <code>TuioInput</code> behavior. For getting Win7 touch input add <code>Win7TouchInput</code>, and for mobile devices add <code>MobileInput</code>.</li>
                             <li><strong>Why gestures don't work together?</strong><br/>For gestures to be recognized simultaneously you need to put one into another one's <code>willRecognizeWith</code> array in inspector or call <code>ShouldRecognizeSimultaneouslyWith(gesture, true);</code>.</li>
+			    <li><strong>Can I use gestures with GUI textures?</strong><br/>No, gestures only work on GameObjects with colliders attached.</li>
                         </ul></p>
                     </section>
 
