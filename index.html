@@ -224,6 +224,19 @@
 
                     <section id="history">
                         <h2>Version history - Unity3d:</h2>
+                        <h4>2.1.0</h4>
+                        <p><ul>
+                        <li>Changed several API names to make more sense.</li>
+                        <li>TapGesture now correctly reports touch position.</li>
+                        <li>LongPressGesture now correctly handles cluster's movement.</li>
+                        <li>Renamed Clusters to Cluster and fixed movement calculations for Flick and Tap gestures.</li>
+                        <li>Divided gestures into simple and cluster-based ones. Simple gestures should be faster to process.</li>
+                        <li>Added a new example for Simple gestures.</li>
+                        <li>Added some features to Scaleform integration.</li>
+                        <li>Touch points projection plane now has its center in collider.bounds.center.</li>
+                        <li>Fixed the issue (#22) with namespaces and default parameters.</li>
+                        </ul></p>
+
 						<h4>2.0.1</h4>
                         <p><ul>
                         <li>Fixed a crash when application using Win7TouchInput exits.</li>
@@ -232,7 +245,7 @@
                         <h4>2.0</h4>
                         <p><ul>
                         <li>Upgraded HitTest mechanics. Now it skips disabled cameras and it's possible to ignore specific layers via Layer Mask. Added a special example illustrating this.</li>
-                        <li>Win7TouchInput and MouseInput detect if they are run on iOS or Android and don't cause any trouble.</li>
+                        <li>Win7TouchInput and MouseInput now detect if they are run on iOS or Android and don't cause any trouble.</li>
                         <li>More mac-friendly build process.</li>
                         <li>Fixed MetaGesture to work on iOS and added it to examples.</li>
                         <li>Made LongPressGesture and TapGesture more continuous.</li>
