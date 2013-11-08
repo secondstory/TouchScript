@@ -605,7 +605,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 2d Camera
-<<<<<<< HEAD:Project/Assets/TouchScript/Examples/Advanced/Advanced.unity
   layerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -645,8 +644,6 @@ MonoBehaviour:
 
 
     Use Alt+click to place a second touch point if you don''t have a multitouch device.'
-=======
->>>>>>> refs/remotes/origin/asset-store:Project/Assets/TouchScript/Examples/Everything Combined/Everything Combined Example.unity
 --- !u!1 &232315387
 GameObject:
   m_ObjectHideFlags: 0
@@ -2401,6 +2398,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 3d Camera
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!65 &1573308016
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2411,11 +2411,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-<<<<<<< HEAD:Project/Assets/TouchScript/Examples/Advanced/Advanced.unity
   m_Size: {x: 30.8173771, y: 23.0940094, z: .00999999978}
-=======
-  m_Size: {x: 36.990696, y: 23.0940094, z: .100000001}
->>>>>>> refs/remotes/origin/asset-store:Project/Assets/TouchScript/Examples/Everything Combined/Everything Combined Example.unity
   m_Center: {x: 0, y: 0, z: 20}
 --- !u!114 &1573308017
 MonoBehaviour:
