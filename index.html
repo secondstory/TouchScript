@@ -33,7 +33,7 @@
                 <li class="logo"><h2>TouchScript</h2></li>
                 <li>GitHub (<a href="https://github.com/InteractiveLab/TouchScript">Unity</a>, <a href="https://github.com/InteractiveLab/TouchScript.as3">Flash</a>)</li>
                 <li>|</li>
-                <li><a href="files/TouchScript.2.1.0.unitypackage">Download Unity Package</a></li>
+                <li><a href="files/TouchScript.3.0.0.unitypackage">Download Unity Package</a></li>
                 <li>|</li>
                 <li>Issues (<a href="https://github.com/InteractiveLab/TouchScript/issues">Unity</a>, <a href="https://github.com/InteractiveLab/TouchScript.as3/issues">Flash</a>)</li>
             </ul>
@@ -229,6 +229,36 @@
 
                     <section id="history">
                         <h2>Version history - Unity3d:</h2>
+                        <h4>3.0.0</h4>
+                        <p><ul>
+                        <li>Switched to Unity 4.2. Starting from this version Unity 3.5 is officially not supported.</li>
+                        <li>Touch input handling and gesture handling functionality was separated into TouchManager and GestureManager classes. Now it's possible to use raw touch points data without any gesture recognition logic.</li>
+                        <li>Instead of WillRecognizeWith gestures now store an array of Friendly Gestures which now has a nice visual editor.</li>
+                        <li>TouchScript.DLL now passes WACK for Windows Store applications.</li>
+                        <li>Added custom editors for all gestures and managers. Everything looks much better now.</li>
+                        <li>Added Win8TouchInput which uses new Windows 8 API.</li>
+                        <li>Updated FlickGesture and added an example for it.</li>
+                        <li>Fixed an issue with MouseInput leaving stuck touch points (issue #10).</li>
+                        <li>Fixed FullscreenTarget in Foreground mode when camera collider sometimes wouldn't catch touch points.</li>
+                        <li>Fixed Transformer2D with objects without parent transform (issue #30).</li>
+                        <li>Now PreviousPosition for still points is handled correctly.</li>
+                        <li>Simple Scale and Simple Rotate gestures now correctly only react on the first two fingers.</li>
+                        <li>Instead of Vector#.zero gestures return InvalidPosition if a position doesn't make sense in this case.</li>
+                        <li>Simple Pan Gesture now has center at point if it has only one point or between first two points if it has more. To be consistent with SimpleScale and SimpleRotate getures.</li>
+                        <li>Pan Gesture now has its center point between two clusters if there are more than one point.</li>
+                        <li>Tap Gesture and Long Press Gesture are now discrete.</li>
+                        <li>Clusters now return TouchPoint.InvalidPosition instead of throwing an exception if not enough points added.</li>
+                        <li>Base Gesture now returns centroid of all touch points as ScreenPosition instead of the first point's position.</li>
+                        <li>Removed FullscreenBackgroundTarget from the library. Use FullScreenTarget instead.</li>
+                        <li>Removed SimpleLongPressGesture and SimpleFlickGesture.</li>
+                        <li>Removed SimpleTapGesture, TapGesture now reports its position more accurately.</li>
+                        <li>Renamed MinPointDistance to MinPointsDistance and made it actually matter in SimpleScale and SimpleRotate gestures.</li>
+                        <li>Renamed TouchesCount to TouchPointsCount and Touches to TouchPoints on TouchManager.</li>
+                        <li>Moved Win7TouchInput to separate DLL.</li>
+                        <li>Rearranged examples.</li>
+                        <li>Other minor changes and fixes.</li>
+                        </ul></p>
+
                         <h4>2.1.0</h4>
                         <p><ul>
                         <li>Changed several API names to make more sense.</li>
