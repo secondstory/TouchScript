@@ -222,6 +222,7 @@
                         <h2>Frequently Asked Questions</h2>
                         <p><ul>
                             <li><strong>Build fails in Unity3d Free.</strong><br/>You need to delete all DLLs from <em>TouchScript/Plugins</em> folder except <code>TouchScript.dll</code>. Other DLLs contain code which is not supported in Unity3d Free.</li>
+                            <li><strong>Build for Windows Store/Windows Phone fails.</strong><br/>You need to delete all DLLs from <em>TouchScript/Plugins</em> folder except <code>TouchScript.dll</code>. Other DLLs refer API restricted on these platforms.</li>
                             <li><strong>TUIO/Windows 7 touch/iOS touch doesn't work.</strong><br/>You most likely haven't added an appropriate touch source. To recieve TUIO messages add somewhere in the scene <code>TuioInput</code> behavior. For getting Win7 touch input add <code>Win7TouchInput</code>, and for mobile devices add <code>MobileInput</code>.</li>
                             <li><strong>How to make gestures work together?</strong><br/>For gestures to be recognized simultaneously you need to put one into another one's <code>Friendly Gestures</code> list in inspector or call <code>gesture1.AddFriendlyGesture(gesture2);</code> from a script. Otherwise the gesture to begin first takes all the touch points.</li>
                         </ul></p>
