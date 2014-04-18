@@ -105,6 +105,52 @@ namespace TouchScript.InputSources
             manager.CancelTouch(id);
         }
 
+
+        ///// <summary>
+        ///// Start touch in given screen position.
+        ///// </summary>
+        ///// <param name="position">Screen position.</param>
+        ///// <returns>Internal touch id.</returns>
+        //protected int beginObject(Vector2 position)
+        //{
+        //    if (CoordinatesRemapper != null)
+        //    {
+        //        position = CoordinatesRemapper.Remap(position);
+        //    }
+        //    return manager.BeginObject(position);
+        //}
+
+        ///// <summary>
+        ///// End touch with id.
+        ///// </summary>
+        ///// <param name="id">Touch point id.</param>
+        //protected void endTObject(int id)
+        //{
+        //    manager.EndObject(id);
+        //}
+
+        ///// <summary>
+        ///// Move touch with id.
+        ///// </summary>
+        ///// <param name="id">Touch id.</param>
+        ///// <param name="position">New screen position.</param>
+        //protected void moveObject(int id, Vector2 position)
+        //{
+        //    if (CoordinatesRemapper != null)
+        //    {
+        //        position = CoordinatesRemapper.Remap(position);
+        //    }
+        //    manager.MoveTouch(id, position);
+        //}
+
+        ///// <summary>
+        ///// Cancel touch with id.
+        ///// </summary>
+        ///// <param name="id">Touch id.</param>
+        //protected void cancelObject(int id)
+        //{
+        //    manager.CancelObject(id);
+        //}
         #endregion
     }
 }

@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="InputSources\InputSourcePro.cs" />
     <Compile Include="InputSources\TuioInput.cs" />
+    <Compile Include="Marker\MarkerController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -63,7 +64,8 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>xcopy /y $(ProjectDir)$(OutDir)*.dll "$(SolutionDir)Examples\General Examples\Assets\TouchScript\Plugins\"
-xcopy /y $(ProjectDir)$(OutDir)*.dll "$(SolutionDir)Examples\Scaleform Examples\Assets\TouchScript\Plugins\"</PostBuildEvent>
+xcopy /y $(ProjectDir)$(OutDir)*.dll "$(SolutionDir)Examples\Scaleform Examples\Assets\TouchScript\Plugins\"
+xcopy /y $(ProjectDir)$(OutDir)*.dll D:\dev\fisher-island-sales-center\code\spikes\unity_multitaction\Assets\TouchScript\Plugins</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

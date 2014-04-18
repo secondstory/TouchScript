@@ -32,9 +32,12 @@ namespace TouchScript.InputSources
 
         private TuioServer server;
         private Dictionary<TuioCursor, int> cursorToInternalId = new Dictionary<TuioCursor, int>();
+        private Dictionary<TuioObject, int> objectToInternalId = new Dictionary<TuioObject, int>();
         private int screenWidth;
         private int screenHeight;
-
+        private static TuioInput instance;
+        // Flag to indicate that we are going out of Play Mode in the editor. Otherwise there might be a loop when while deinitializing other objects access TouchScript.Instance which recreates an instance of TouchManager and everything breaks.
+        private static bool shuttingDown = false;
         #endregion
 
         #region Unity
@@ -49,9 +52,31 @@ namespace TouchScript.InputSources
             server.CursorAdded += OnCursorAdded;
             server.CursorUpdated += OnCursorUpdated;
             server.CursorRemoved += OnCursorRemoved;
+            //server.ObjectAdded += server_ObjectAdded;
+            //server.ObjectUpdated += server_ObjectUpdated;
+            //server.ObjectRemoved += server_ObjectRemoved;
             server.Connect();
+            
         }
-
+        public static TuioInput Instance
+        {
+            get
+            {
+                if (shuttingDown) return null;
+                if (instance == null)
+                {
+                    instance = FindObjectOfType(typeof(TuioInput)) as TuioInput;
+                    if (instance == null && Application.isPlaying)
+                    {
+                        var go = GameObject.Find("TouchScript");
+                        if (go == null) go = new GameObject("TouchScript");
+                        instance = go.AddComponent<TuioInput>();
+                    }
+                }
+                return instance;
+            }
+        }
+        public TuioServer Server { get { return server; } }
         /// <inheritdoc />
         protected override void Update()
         {
@@ -70,6 +95,7 @@ namespace TouchScript.InputSources
                 server.CursorRemoved -= OnCursorRemoved;
                 server.Disconnect();
             }
+            if (!Application.isLoadingLevel) shuttingDown = true;
             base.OnDestroy();
         }
 
@@ -115,6 +141,45 @@ namespace TouchScript.InputSources
                 endTouch(existingCursor);
             }
         }
+
+        //private void server_ObjectAdded(object sender, TuioObjectEventArgs e)
+        //{
+        //    var obj = e.Object;
+        //    lock (this)
+        //    {
+        //        var x = obj.getScreenX( screenWidth);
+        //        var y = obj.getScreenY( screenHeight);
+        //        objectToInternalId.Add(obj, beginObject(new Vector2(x, y)));
+        //    }
+        //}
+
+        //private void server_ObjectUpdated(object sender, TuioObjectEventArgs e)
+        //{
+        //    var obj = e.Object;
+        //    lock (this)
+        //    {
+        //        int existingObject;
+        //        if (!objectToInternalId.TryGetValue(obj, out existingObject)) return;
+
+        //        var x = obj.getScreenX(screenWidth);
+        //        var y = obj.getScreenY(screenHeight);
+
+        //        moveObject(existingObject, new Vector2(x, y));
+        //    }
+        //}
+
+        //private void server_ObjectRemoved(object sender, TuioObjectEventArgs e)
+        //{
+        //    var obj = e.Object;
+        //    lock (this)
+        //    {
+        //        int existingObject;
+        //        if (!objectToInternalId.TryGetValue(obj, out existingObject)) return;
+
+        //        objectToInternalId.Remove(obj);
+        //        endObj(existingObject);
+        //    }
+        //}
 
         #endregion
     }
