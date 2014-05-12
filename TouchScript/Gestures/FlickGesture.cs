@@ -173,7 +173,7 @@ namespace TouchScript.Gestures
                 while (i >= 0 && totalTime < FlickTime)
                 {
                     totalTime += timeDeltas[i];
-                    totalMovement += positionDeltas[i];
+                    totalMovement += positionDeltas[i]; 
                     i--;
                 }
 

@@ -34,7 +34,7 @@ namespace TouchScript.Gestures.Simple
         /// 3D delta position in local coordinates.
         /// </summary>
         public Vector3 LocalDeltaPosition { get; private set; }
-
+        public Vector3 Pivot{ get; private set; }
         /// <inheritdoc />
         public override Vector2 ScreenPosition
         {
@@ -70,7 +70,6 @@ namespace TouchScript.Gestures.Simple
         #endregion
 
         #region Gesture callbacks
-
         /// <inheritdoc />
         protected override void touchesMoved(IList<TouchPoint> touches)
         {
@@ -89,7 +88,8 @@ namespace TouchScript.Gestures.Simple
                 newGlobalCenter3DPos = ProjectionUtils.CameraToPlaneProjection(newCenter2DPos, projectionCamera, WorldTransformPlane);
                 globalDelta3DPos = newGlobalCenter3DPos - oldGlobalCenter3DPos;
                 oldLocalCenter3DPos = globalToLocalPosition(oldGlobalCenter3DPos);
-                newLocalCenter3DPos = globalToLocalPosition(newGlobalCenter3DPos);
+                Pivot = newLocalCenter3DPos = globalToLocalPosition(newGlobalCenter3DPos);
+               // Debug.Log(Pivot);
                 localDelta3DPos = newLocalCenter3DPos - globalToLocalPosition(oldGlobalCenter3DPos);
             } else
             {

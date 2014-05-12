@@ -21,7 +21,12 @@ namespace TouchScript.Gestures.Simple
 
         private float scalingBuffer;
         private bool isScaling = false;
-
+        
+        [SerializeField]
+        private Vector2 minScale = Vector2.one;
+       
+        [SerializeField]
+        private Vector2 maxScale = Vector2.one * 10;
         #endregion
 
         #region Public properties
@@ -35,11 +40,15 @@ namespace TouchScript.Gestures.Simple
             set { scalingThreshold = value; }
         }
 
+        public Vector3 MinScale { get { return minScale; } set { minScale = value; } }
+        public Vector3 MaxScale { get { return maxScale; } set { maxScale = value; } }
+            
         /// <summary>
         /// Contains local delta scale when gesture is recognized.
         /// Value is between 0 and +infinity, where 1 is no scale, 0.5 is scaled in half, 2 scaled twice.
         /// </summary>
         public float LocalDeltaScale { get; private set; }
+        
 
         #endregion
 

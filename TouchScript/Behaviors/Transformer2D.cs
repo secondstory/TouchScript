@@ -74,6 +74,18 @@ namespace TouchScript.Behaviors
                 localRotationToGo = transform.localRotation;
             }
             transform.localRotation = lastLocalRotation = Quaternion.Lerp(transform.localRotation, localRotationToGo, fraction);
+
+
+         //   transform.localScale = localScaleToGo;
+           
+         //   // Translate manipulation
+         //   var originalCenter = transform.localPosition;
+         //   var newCenter = Pivot;
+         //   transform.localPosition = newCenter - originalCenter;
+
+         //   Debug.Log(Pivot);
+         //   // Rotation manipulation
+         ////   transform.localRotation = localRotationToGo;// Quaternion.Angle(localRotationToGo, transform.localRotation);
         }
 
         #endregion
@@ -90,7 +102,7 @@ namespace TouchScript.Behaviors
         #endregion
 
         #region Event handlers
-
+        public Vector3 Pivot= Vector3.zero;
         private void onPanStateChanged(object sender, GestureStateChangeEventArgs e)
         {
             switch (e.State)
@@ -98,7 +110,7 @@ namespace TouchScript.Behaviors
                 case Gesture.GestureState.Began:
                 case Gesture.GestureState.Changed:
                     var gesture = (SimplePanGesture)sender;
-
+                    Pivot = gesture.Pivot;
                     if (gesture.LocalDeltaPosition != Vector3.zero)
                     {
                         localPositionToGo += gesture.LocalDeltaPosition;
@@ -139,7 +151,14 @@ namespace TouchScript.Behaviors
 
                     if (Math.Abs(gesture.LocalDeltaScale - 1) > 0.00001)
                     {
-                        localScaleToGo *= gesture.LocalDeltaScale;
+
+                        var nextScale = localScaleToGo * gesture.LocalDeltaScale;
+                        var min = gesture.MinScale;
+                        var max = gesture.MaxScale;
+
+                        if(min.x < nextScale.x && min.y < nextScale.y && max.x > nextScale.x && max.y > nextScale.y )
+                            localScaleToGo *= gesture.LocalDeltaScale;
+                        
                     }
                     break;
             }
