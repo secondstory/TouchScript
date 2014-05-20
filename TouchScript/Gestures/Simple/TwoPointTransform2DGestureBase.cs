@@ -13,7 +13,7 @@ namespace TouchScript.Gestures.Simple
     public abstract class TwoPointTransform2DGestureBase : Transform2DGestureBase
     {
         #region Public properties
-
+        public Vector3 PivotPoint { get; set; }
         /// <summary>
         /// Minimum distance between 2 points in cm for gesture to begin.
         /// </summary>

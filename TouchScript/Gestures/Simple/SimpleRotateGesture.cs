@@ -23,8 +23,7 @@ namespace TouchScript.Gestures.Simple
         private float rotationBuffer;
         private bool isRotating = false;
 
-        private Vector3 pivot;
-        public Vector3 Pivot { get {return pivot; }}
+      
         #endregion
 
         #region Public properties
@@ -90,9 +89,9 @@ namespace TouchScript.Gestures.Simple
             }
 
             oldGlobalCenter3DPos = ProjectionUtils.CameraToPlaneProjection(oldCenter2DPos, projectionCamera, WorldTransformPlane);
-             newGlobalCenter3DPos = ProjectionUtils.CameraToPlaneProjection(newCenter2DPos, projectionCamera, WorldTransformPlane);
+            newGlobalCenter3DPos = ProjectionUtils.CameraToPlaneProjection(newCenter2DPos, projectionCamera, WorldTransformPlane);
             oldLocalCenter3DPos = globalToLocalPosition(oldGlobalCenter3DPos);
-            pivot = newLocalCenter3DPos = globalToLocalPosition(newGlobalCenter3DPos);
+            newLocalCenter3DPos = globalToLocalPosition(newGlobalCenter3DPos);
 
             if (Math.Abs(deltaRotation) > 0.00001)
             {
@@ -114,6 +113,8 @@ namespace TouchScript.Gestures.Simple
                         if (State == GestureState.Possible)
                         {
                             setState(GestureState.Began);
+                            PivotPoint = WorldTransformCenter;
+                            Debug.Log("aosdjlakjsdla sdlakjs dlakjs dlakjs dla" + WorldTransformCenter);
                         } else
                         {
                             setState(GestureState.Changed);
