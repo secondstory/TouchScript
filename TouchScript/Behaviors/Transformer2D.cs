@@ -71,14 +71,22 @@ namespace TouchScript.Behaviors
 
             //}
             //transform.localScale = lastLocalScale = Vector3.Lerp(transform.localScale, localScaleToGo, fraction);
-           if(parentObject == null || localScaleToGo !=parentObject.transform.localScale )scaleFromPosition(localScaleToGo, middlePoint);
-
+            if (parentObject == null || localScaleToGo != parentObject.transform.localScale)
+            {
+                var newscale = scaleFromPosition(localScaleToGo, middlePoint);
+               parentObject.transform.localScale= Vector3.Lerp(parentObject.transform.localScale, newscale, fraction);
+            }
             //if (transform.localRotation != lastLocalRotation)
             //{
             //    localRotationToGo = transform.localRotation;
             //}
             //transform.localRotation = lastLocalRotation = Quaternion.Lerp(transform.localRotation, localRotationToGo, fraction);
-           if (parentObject == null || localRotationToGo != parentObject.transform.localRotation) rotateFromPosition(localRotationToGo, middlePoint);
+            if (parentObject == null || localRotationToGo != parentObject.transform.localRotation)
+            {
+                var newrotation = rotateFromPosition(localRotationToGo, middlePoint);
+                parentObject.transform.localRotation = Quaternion.Lerp(parentObject.transform.localRotation, newrotation, fraction); 
+
+            }
 
          //   transform.localScale = localScaleToGo;
            
@@ -97,46 +105,48 @@ namespace TouchScript.Behaviors
         #region Private functions
         static Vector3 prevPos ;
         private GameObject parentObject;
-        private void scaleFromPosition(Vector3 scale, Vector3 fromPos)
+        private Vector3 scaleFromPosition(Vector3 scale, Vector3 fromPos)
         {
-            if (parentObject == null)
-            {
-                parentObject = new GameObject();
-                parentObject.transform.parent = transform.parent;
-                this.transform.parent = parentObject.transform;
-            }
+            CreatePivot();
             if (!fromPos.Equals(prevPos))
             {
-                Debug.Log("notequal"+ " "+ fromPos +" " +prevPos);
                 Vector3 prevParentPos = parentObject.transform.position;
                 parentObject.transform.position = fromPos;
                 Vector3 diff = parentObject.transform.position - prevParentPos;
                 Vector3 pos = new Vector3(diff.x / parentObject.transform.localScale.x * -1, diff.y / parentObject.transform.localScale.y * -1, transform.position.z);
                 transform.localPosition = new Vector3(transform.localPosition.x + pos.x, transform.localPosition.y + pos.y, pos.z);
             }
-            parentObject.transform.localScale = scale;
+            //parentObject.transform.localScale = scale;
             prevPos = fromPos;
+            return scale;
         }
-        private void rotateFromPosition(Quaternion rotate, Vector3 fromPos)
+        private Quaternion rotateFromPosition(Quaternion rotate, Vector3 fromPos)
         {
-            if (parentObject == null)
-            {
-                parentObject = new GameObject();
-                parentObject.transform.parent = transform.parent;
-                this.transform.parent = parentObject.transform;
-            }
+            CreatePivot();
             if (!fromPos.Equals(prevPos))
             {
-                Debug.Log("notequal" + " " + fromPos + " " + prevPos);
+                
                 Vector3 prevParentPos = parentObject.transform.position;
                 parentObject.transform.position = fromPos;
                 Vector3 diff = parentObject.transform.position - prevParentPos;
                 Vector3 pos = new Vector3(diff.x / parentObject.transform.localScale.x * -1, diff.y / parentObject.transform.localScale.y * -1, transform.position.z);
                 transform.localPosition = new Vector3(transform.localPosition.x + pos.x, transform.localPosition.y + pos.y, pos.z);
             }
-            Debug.Log(fromPos + " > " + prevPos);
-            parentObject.transform.localRotation = rotate;
+
+            // parentObject.transform.localRotation = rotate;
             prevPos = fromPos;
+            return rotate;
+
+        }
+        private void CreatePivot()
+        {
+            if (parentObject == null)
+            {
+                parentObject = new GameObject();
+                parentObject.name = transform.name + "_Pivot";
+                parentObject.transform.parent = transform.parent;
+                this.transform.parent = parentObject.transform;
+            }
         }
         private void setDefaults()
         {
@@ -144,7 +154,7 @@ namespace TouchScript.Behaviors
             localRotationToGo = lastLocalRotation = transform.localRotation;
             localScaleToGo = lastLocalScale = transform.localScale;
         }
-
+        
         #endregion
 
         #region Event handlers
@@ -208,8 +218,6 @@ namespace TouchScript.Behaviors
                         
                     }
                     middlePoint = gesture.PivotPoint;
-                    // localPositionToGo = gesture.TranslationDelta;
-                    Debug.Log(">>" + middlePoint);
                     break;
             }
         }
